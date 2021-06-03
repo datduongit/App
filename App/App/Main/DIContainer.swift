@@ -10,7 +10,7 @@ import SwinjectAutoregistration
 
 open class DIContainer {
     public static func inject(_ container: Container) {
-        container.autoregister(HomeService.self, initializer: HomeService.makeProvider)
-        container.autoregister(HomeRepository.self, initializer: RemoteHomeRepository.init)
+//        container.autoregister(HomeService.self, initializer: HomeService.makeProvider)
+//        container.autoregister(HomeRepository.self, initializer: RemoteHomeRepository.init)
     }
 }
