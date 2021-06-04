@@ -19,7 +19,7 @@ class HomeCoordinator: Coordinator {
     }
 
     private lazy var rootVC: HomeViewController = {
-        let viewModel = HomeViewModel(repo: container.resolve(HomeRepository.self)!)
+        let viewModel = HomeViewModel(repo: container.resolve(IHomeRepo.self)!)
         
         viewModel
             .navToDetail

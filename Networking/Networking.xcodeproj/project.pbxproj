@@ -10,6 +10,8 @@
 		04D840AE26675800004E3957 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D840A426675800004E3957 /* Networking.framework */; };
 		04D840B326675800004E3957 /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D840B226675800004E3957 /* NetworkingTests.swift */; };
 		04D840B526675800004E3957 /* Networking.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D840A726675800004E3957 /* Networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3763D2172669E8FE00901CE5 /* IConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3763D2162669E8FE00901CE5 /* IConverter.swift */; };
+		3763D2192669E92700901CE5 /* ListConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3763D2182669E92700901CE5 /* ListConverter.swift */; };
 		37A2A2142668BE2100701C3F /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A2132668BE2100701C3F /* HTTPMethod.swift */; };
 		37A2A2162668BE4E00701C3F /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A2152668BE4E00701C3F /* APIEndpoint.swift */; };
 		37A2A2182668BF6700701C3F /* URLRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A2172668BF6700701C3F /* URLRequestBuilder.swift */; };
@@ -30,7 +32,7 @@
 		37A2A23B2668CC2800701C3F /* ApiConsts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A23A2668CC2800701C3F /* ApiConsts.swift */; };
 		37A2A23D2668CD9100701C3F /* EmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A23C2668CD9100701C3F /* EmptyResponse.swift */; };
 		37A2A2412668E01900701C3F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A2402668E01900701C3F /* Extensions.swift */; };
-		37A2A2432668EAFE00701C3F /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A2422668EAFE00701C3F /* Repository.swift */; };
+		37A2A2432668EAFE00701C3F /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A2422668EAFE00701C3F /* APIService.swift */; };
 		D53124D525227C1D96D92845 /* Pods_Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0B428E6AA5D76F2296488D /* Pods_Networking.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,8 @@
 		04D840AD26675800004E3957 /* NetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D840B226675800004E3957 /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
 		04D840B426675800004E3957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3763D2162669E8FE00901CE5 /* IConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IConverter.swift; sourceTree = "<group>"; };
+		3763D2182669E92700901CE5 /* ListConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListConverter.swift; sourceTree = "<group>"; };
 		37A2A2132668BE2100701C3F /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		37A2A2152668BE4E00701C3F /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		37A2A2172668BF6700701C3F /* URLRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestBuilder.swift; sourceTree = "<group>"; };
@@ -71,7 +75,7 @@
 		37A2A23A2668CC2800701C3F /* ApiConsts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConsts.swift; sourceTree = "<group>"; };
 		37A2A23C2668CD9100701C3F /* EmptyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResponse.swift; sourceTree = "<group>"; };
 		37A2A2402668E01900701C3F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		37A2A2422668EAFE00701C3F /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		37A2A2422668EAFE00701C3F /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		5E412EC2D28426D44714ECDF /* Pods-Networking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Networking.debug.xcconfig"; path = "Target Support Files/Pods-Networking/Pods-Networking.debug.xcconfig"; sourceTree = "<group>"; };
 		6B0B428E6AA5D76F2296488D /* Pods_Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E820686732CFDAF23A75C87 /* Pods-Networking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Networking.release.xcconfig"; path = "Target Support Files/Pods-Networking/Pods-Networking.release.xcconfig"; sourceTree = "<group>"; };
@@ -174,7 +178,7 @@
 				37A2A2132668BE2100701C3F /* HTTPMethod.swift */,
 				37A2A2282668C75300701C3F /* CancellableRequest.swift */,
 				37A2A2312668CA0400701C3F /* HTTPClient.swift */,
-				37A2A2422668EAFE00701C3F /* Repository.swift */,
+				37A2A2422668EAFE00701C3F /* APIService.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -184,6 +188,8 @@
 			children = (
 				37A2A2362668CA4600701C3F /* EmptySendingData.swift */,
 				37A2A23C2668CD9100701C3F /* EmptyResponse.swift */,
+				3763D2162669E8FE00901CE5 /* IConverter.swift */,
+				3763D2182669E92700901CE5 /* ListConverter.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -333,12 +339,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3763D2172669E8FE00901CE5 /* IConverter.swift in Sources */,
 				37A2A21C2668C0A200701C3F /* HTTPStatusCode.swift in Sources */,
 				37A2A2162668BE4E00701C3F /* APIEndpoint.swift in Sources */,
 				37A2A2252668C59E00701C3F /* CombineResponseErrorAndData.swift in Sources */,
 				37A2A2272668C5F400701C3F /* MultipartFormData.swift in Sources */,
 				37A2A2202668C4E900701C3F /* HttpResponseError.swift in Sources */,
 				37A2A2292668C75300701C3F /* CancellableRequest.swift in Sources */,
+				3763D2192669E92700901CE5 /* ListConverter.swift in Sources */,
 				37A2A22D2668C7B400701C3F /* URLResponse.swift in Sources */,
 				37A2A23D2668CD9100701C3F /* EmptyResponse.swift in Sources */,
 				37A2A2232668C50F00701C3F /* HttpRequestError.swift in Sources */,
@@ -347,7 +355,7 @@
 				37A2A2322668CA0400701C3F /* HTTPClient.swift in Sources */,
 				37A2A2342668CA2700701C3F /* Log+Extensions.swift in Sources */,
 				37A2A21A2668C03A00701C3F /* TypeAlias.swift in Sources */,
-				37A2A2432668EAFE00701C3F /* Repository.swift in Sources */,
+				37A2A2432668EAFE00701C3F /* APIService.swift in Sources */,
 				37A2A2372668CA4600701C3F /* EmptySendingData.swift in Sources */,
 				37A2A2412668E01900701C3F /* Extensions.swift in Sources */,
 				37A2A2392668CAC100701C3F /* URLRequest.swift in Sources */,

@@ -23,13 +23,8 @@
 		04D841E026676D94004E3957 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D841DF26676D94004E3957 /* HomeViewController.swift */; };
 		04D841E226676D9E004E3957 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D841E126676D9E004E3957 /* HomeViewModel.swift */; };
 		04D841E426676DB0004E3957 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D841E326676DB0004E3957 /* HomeViewController.xib */; };
-		04D841E6266771F7004E3957 /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D841E5266771F7004E3957 /* HomeRepository.swift */; };
-		04D841E826677234004E3957 /* RemoteHomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D841E726677234004E3957 /* RemoteHomeRepository.swift */; };
-		04D841F8266772D0004E3957 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D841ED266772D0004E3957 /* HomeService.swift */; };
-		04D841F9266772D0004E3957 /* HomeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D841EE266772D0004E3957 /* HomeRequest.swift */; };
-		04D841FB266772D0004E3957 /* AppTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D841F1266772D0004E3957 /* AppTargetType.swift */; };
-		04D841FD266772D0004E3957 /* HomeErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D841F4266772D0004E3957 /* HomeErrorHandler.swift */; };
-		04D84202266775B9004E3957 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D84201266775B9004E3957 /* HomeModel.swift */; };
+		04D841E6266771F7004E3957 /* IHomeRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D841E5266771F7004E3957 /* IHomeRepo.swift */; };
+		04D841E826677234004E3957 /* RemoteHomeRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D841E726677234004E3957 /* RemoteHomeRepo.swift */; };
 		04D842062667773B004E3957 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D842052667773B004E3957 /* DIContainer.swift */; };
 		04D8420D26677BEB004E3957 /* LocalHomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D8420C26677BEB004E3957 /* LocalHomeRepository.swift */; };
 		04D8421826679862004E3957 /* HomeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D8421726679862004E3957 /* HomeDetailViewController.swift */; };
@@ -40,6 +35,16 @@
 		04FF002B26671ACD003E8D96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04FF002926671ACD003E8D96 /* LaunchScreen.storyboard */; };
 		04FF003626671ACD003E8D96 /* AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FF003526671ACD003E8D96 /* AppTests.swift */; };
 		04FF004126671ACE003E8D96 /* AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FF004026671ACE003E8D96 /* AppUITests.swift */; };
+		3763D2152669E76C00901CE5 /* AppAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3763D2142669E76C00901CE5 /* AppAPIService.swift */; };
+		3763D21F2669FB0200901CE5 /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3763D21E2669FB0200901CE5 /* APIConfig.swift */; };
+		3763D2222669FBB300901CE5 /* HomeDataToHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3763D2212669FBB300901CE5 /* HomeDataToHome.swift */; };
+		3763D2242669FBD500901CE5 /* HomeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3763D2232669FBD500901CE5 /* HomeData.swift */; };
+		3763D2272669FC1A00901CE5 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3763D2262669FC1A00901CE5 /* Home.swift */; };
+		3763D2292669FCED00901CE5 /* AppAPIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3763D2282669FCED00901CE5 /* AppAPIEndpoint.swift */; };
+		3763D22B266A001200901CE5 /* AppBaseRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3763D22A266A001200901CE5 /* AppBaseRepo.swift */; };
+		3763D22D266A009300901CE5 /* AppApiServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3763D22C266A009300901CE5 /* AppApiServiceFactory.swift */; };
+		3763D230266A03FA00901CE5 /* HomeApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3763D22F266A03FA00901CE5 /* HomeApiService.swift */; };
+		3763D234266A04E000901CE5 /* App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3763D232266A04E000901CE5 /* App.xcdatamodeld */; };
 		37A2A2112668BD5B00701C3F /* Logger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A2A20E2668BD1400701C3F /* Logger.framework */; };
 		37A2A2122668BD5B00701C3F /* Logger.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37A2A20E2668BD1400701C3F /* Logger.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8A95E7774FB7DE66FDA7FC66 /* Pods_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A1AFEE413045245BF29C9C8 /* Pods_App.framework */; };
@@ -107,13 +112,8 @@
 		04D841DF26676D94004E3957 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		04D841E126676D9E004E3957 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		04D841E326676DB0004E3957 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		04D841E5266771F7004E3957 /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
-		04D841E726677234004E3957 /* RemoteHomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteHomeRepository.swift; sourceTree = "<group>"; };
-		04D841ED266772D0004E3957 /* HomeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
-		04D841EE266772D0004E3957 /* HomeRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRequest.swift; sourceTree = "<group>"; };
-		04D841F1266772D0004E3957 /* AppTargetType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTargetType.swift; sourceTree = "<group>"; };
-		04D841F4266772D0004E3957 /* HomeErrorHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeErrorHandler.swift; sourceTree = "<group>"; };
-		04D84201266775B9004E3957 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		04D841E5266771F7004E3957 /* IHomeRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IHomeRepo.swift; sourceTree = "<group>"; };
+		04D841E726677234004E3957 /* RemoteHomeRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteHomeRepo.swift; sourceTree = "<group>"; };
 		04D842052667773B004E3957 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		04D8420C26677BEB004E3957 /* LocalHomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalHomeRepository.swift; sourceTree = "<group>"; };
 		04D8421726679862004E3957 /* HomeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +132,16 @@
 		04FF004226671ACE003E8D96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A1AFEE413045245BF29C9C8 /* Pods_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B117982577FFA3B525E47FB /* Pods-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.debug.xcconfig"; path = "Target Support Files/Pods-App/Pods-App.debug.xcconfig"; sourceTree = "<group>"; };
+		3763D2142669E76C00901CE5 /* AppAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAPIService.swift; sourceTree = "<group>"; };
+		3763D21E2669FB0200901CE5 /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
+		3763D2212669FBB300901CE5 /* HomeDataToHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataToHome.swift; sourceTree = "<group>"; };
+		3763D2232669FBD500901CE5 /* HomeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeData.swift; sourceTree = "<group>"; };
+		3763D2262669FC1A00901CE5 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		3763D2282669FCED00901CE5 /* AppAPIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAPIEndpoint.swift; sourceTree = "<group>"; };
+		3763D22A266A001200901CE5 /* AppBaseRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBaseRepo.swift; sourceTree = "<group>"; };
+		3763D22C266A009300901CE5 /* AppApiServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppApiServiceFactory.swift; sourceTree = "<group>"; };
+		3763D22F266A03FA00901CE5 /* HomeApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeApiService.swift; sourceTree = "<group>"; };
+		3763D233266A04E000901CE5 /* App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = App.xcdatamodel; sourceTree = "<group>"; };
 		37A2A2002668BD1400701C3F /* LoggerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerTests.swift; sourceTree = "<group>"; };
 		37A2A2012668BD1400701C3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37A2A2032668BD1400701C3F /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
@@ -259,52 +269,11 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		04D841E9266772D0004E3957 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				04D841EA266772D0004E3957 /* Api */,
-				04D841F0266772D0004E3957 /* TargetType */,
-				04D841F3266772D0004E3957 /* Error */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
-		04D841EA266772D0004E3957 /* Api */ = {
-			isa = PBXGroup;
-			children = (
-				04D841ED266772D0004E3957 /* HomeService.swift */,
-				04D841EE266772D0004E3957 /* HomeRequest.swift */,
-			);
-			path = Api;
-			sourceTree = "<group>";
-		};
-		04D841F0266772D0004E3957 /* TargetType */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = TargetType;
-			sourceTree = "<group>";
-		};
-		04D841F3266772D0004E3957 /* Error */ = {
-			isa = PBXGroup;
-			children = (
-				04D841F4266772D0004E3957 /* HomeErrorHandler.swift */,
-			);
-			path = Error;
-			sourceTree = "<group>";
-		};
-		04D8420426677684004E3957 /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				04D84201266775B9004E3957 /* HomeModel.swift */,
-			);
-			path = Entities;
-			sourceTree = "<group>";
-		};
 		04D8420E26677D56004E3957 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				04D841E5266771F7004E3957 /* HomeRepository.swift */,
+				3763D2252669FC1000901CE5 /* Model */,
+				04D841E5266771F7004E3957 /* IHomeRepo.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -312,9 +281,10 @@
 		04D8420F26677D6F004E3957 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				04D8420426677684004E3957 /* Entities */,
+				3763D21A2669FAB900901CE5 /* API */,
 				04D8421026677DA2004E3957 /* Remote */,
-				04D8421126677DAE004E3957 /* Database */,
+				3763D231266A04D400901CE5 /* Database */,
+				04D8421126677DAE004E3957 /* Local */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -322,19 +292,17 @@
 		04D8421026677DA2004E3957 /* Remote */ = {
 			isa = PBXGroup;
 			children = (
-				04D841F1266772D0004E3957 /* AppTargetType.swift */,
-				04D841E726677234004E3957 /* RemoteHomeRepository.swift */,
-				04D841E9266772D0004E3957 /* Network */,
+				04D841E726677234004E3957 /* RemoteHomeRepo.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
 		};
-		04D8421126677DAE004E3957 /* Database */ = {
+		04D8421126677DAE004E3957 /* Local */ = {
 			isa = PBXGroup;
 			children = (
 				04D8420C26677BEB004E3957 /* LocalHomeRepository.swift */,
 			);
-			path = Database;
+			path = Local;
 			sourceTree = "<group>";
 		};
 		04D842122667813E004E3957 /* View */ = {
@@ -413,6 +381,61 @@
 			);
 			name = Pods;
 			path = ../Pods;
+			sourceTree = "<group>";
+		};
+		3763D21A2669FAB900901CE5 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				3763D22E266A03EE00901CE5 /* ApiService */,
+				3763D2202669FB9100901CE5 /* Converter */,
+				3763D21D2669FAD000901CE5 /* Model */,
+				3763D21E2669FB0200901CE5 /* APIConfig.swift */,
+				3763D2142669E76C00901CE5 /* AppAPIService.swift */,
+				3763D2282669FCED00901CE5 /* AppAPIEndpoint.swift */,
+				3763D22A266A001200901CE5 /* AppBaseRepo.swift */,
+				3763D22C266A009300901CE5 /* AppApiServiceFactory.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		3763D21D2669FAD000901CE5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3763D2232669FBD500901CE5 /* HomeData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3763D2202669FB9100901CE5 /* Converter */ = {
+			isa = PBXGroup;
+			children = (
+				3763D2212669FBB300901CE5 /* HomeDataToHome.swift */,
+			);
+			path = Converter;
+			sourceTree = "<group>";
+		};
+		3763D2252669FC1000901CE5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3763D2262669FC1A00901CE5 /* Home.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3763D22E266A03EE00901CE5 /* ApiService */ = {
+			isa = PBXGroup;
+			children = (
+				3763D22F266A03FA00901CE5 /* HomeApiService.swift */,
+			);
+			path = ApiService;
+			sourceTree = "<group>";
+		};
+		3763D231266A04D400901CE5 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				3763D232266A04E000901CE5 /* App.xcdatamodeld */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 		37A2A1FE2668BD1400701C3F /* Logger */ = {
@@ -669,24 +692,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04D841E6266771F7004E3957 /* HomeRepository.swift in Sources */,
+				04D841E6266771F7004E3957 /* IHomeRepo.swift in Sources */,
+				3763D234266A04E000901CE5 /* App.xcdatamodeld in Sources */,
 				04D841C6266763A1004E3957 /* SplashViewController.swift in Sources */,
 				04D8421C266799A1004E3957 /* HomeDetailViewModel.swift in Sources */,
 				04D841C1266762EC004E3957 /* AppCoordinator.swift in Sources */,
-				04D841F8266772D0004E3957 /* HomeService.swift in Sources */,
-				04D841FD266772D0004E3957 /* HomeErrorHandler.swift in Sources */,
 				04D841E226676D9E004E3957 /* HomeViewModel.swift in Sources */,
 				04D841D926676CED004E3957 /* HomeCoordinator.swift in Sources */,
 				04D842062667773B004E3957 /* DIContainer.swift in Sources */,
 				04D8420D26677BEB004E3957 /* LocalHomeRepository.swift in Sources */,
-				04D841FB266772D0004E3957 /* AppTargetType.swift in Sources */,
+				3763D22B266A001200901CE5 /* AppBaseRepo.swift in Sources */,
+				3763D2242669FBD500901CE5 /* HomeData.swift in Sources */,
 				04FF001F26671ACC003E8D96 /* AppDelegate.swift in Sources */,
+				3763D22D266A009300901CE5 /* AppApiServiceFactory.swift in Sources */,
+				3763D2272669FC1A00901CE5 /* Home.swift in Sources */,
+				3763D2292669FCED00901CE5 /* AppAPIEndpoint.swift in Sources */,
 				04D841D12667652F004E3957 /* SplashViewModel.swift in Sources */,
+				3763D2222669FBB300901CE5 /* HomeDataToHome.swift in Sources */,
 				04D8421826679862004E3957 /* HomeDetailViewController.swift in Sources */,
-				04D84202266775B9004E3957 /* HomeModel.swift in Sources */,
-				04D841F9266772D0004E3957 /* HomeRequest.swift in Sources */,
+				3763D21F2669FB0200901CE5 /* APIConfig.swift in Sources */,
+				3763D230266A03FA00901CE5 /* HomeApiService.swift in Sources */,
+				3763D2152669E76C00901CE5 /* AppAPIService.swift in Sources */,
 				04D841E026676D94004E3957 /* HomeViewController.swift in Sources */,
-				04D841E826677234004E3957 /* RemoteHomeRepository.swift in Sources */,
+				04D841E826677234004E3957 /* RemoteHomeRepo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1007,6 +1035,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3763D232266A04E000901CE5 /* App.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3763D233266A04E000901CE5 /* App.xcdatamodel */,
+			);
+			currentVersion = 3763D233266A04E000901CE5 /* App.xcdatamodel */;
+			path = App.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 04FF001326671ACC003E8D96 /* Project object */;
 }

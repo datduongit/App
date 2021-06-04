@@ -11,15 +11,15 @@ import Logger
 private let TAG = "[HTTPClient]"
 private let responseTimeWarningThreshold: Double = 1500 // ms
 
-class HTTPClient {
-
+public class HTTPClient {
+    
     private let session: URLSession
-
-    init(session: URLSession) {
+    
+    public init(session: URLSession) {
         self.session = session
     }
     
-    var enableGETLogs: Bool = false
+    public var enableGETLogs: Bool = false
 
     /// Create a dataTask for URLRequest
     /// This function will respect `request.httpBody`, if request has its own body then the parameter `body` will not be set.

@@ -25,7 +25,7 @@ class URLRequestBuilder {
     private var parameters: ParametersType?
     private var sendingData: Encodable?
     private var encodingFactory: HTTPEncoding.Factory?
-    private var multipartData: MultipartFormDataBuilderType?
+    private var multipartDataBuilder: MultipartFormDataBuilderType?
     
     final func build() -> URLRequest {
         let url = generateUrlComponent(path: path, parameters: parameters)
@@ -35,10 +35,10 @@ class URLRequestBuilder {
         urlRequest.httpMethod = method.rawValue
         urlRequest.allHTTPHeaderFields = httpHeader
         urlRequest.cachePolicy = cachePolicy
-        if let multipart = multipartData {
-            let body = multipart.build()
+        if let multipartBuilder = multipartDataBuilder {
+            let body = multipartBuilder.build()
             urlRequest.httpBody = body
-            urlRequest.setValue("multipart/form-data; boundary=\(multipart.boundary)", forHTTPHeaderField: "Content-Type")
+            urlRequest.setValue("multipart/form-data; boundary=\(multipartBuilder.boundary)", forHTTPHeaderField: "Content-Type")
             urlRequest.setValue("\(body.count)", forHTTPHeaderField: "Content-Length")
         } else if sendingData != nil {
             urlRequest.httpBody = sendingData?.toData(using: encodingFactory?.create())
@@ -48,44 +48,55 @@ class URLRequestBuilder {
         return urlRequest
     }
     
+    @discardableResult
     func path(_ path: String) -> URLRequestBuilder {
         self.path = path
         return self
     }
     
+    @discardableResult
     func cachePolicy(_ policy: URLRequest.CachePolicy) -> URLRequestBuilder {
         self.cachePolicy = policy
         return self
     }
     
+    @discardableResult
     func httpMethod(_ method: HTTPMethod) -> URLRequestBuilder {
         self.method = method
         return self
     }
     
+    @discardableResult
     func httpHeaders(_ headers: [String: String]?) -> URLRequestBuilder {
         self.httpHeader = headers
         return self
     }
     
+    @discardableResult
     func parameters(_ params: ParametersType?) -> URLRequestBuilder {
         self.parameters = params
         return self
     }
     
+    @discardableResult
     func sendingData(_ data: Encodable? = nil,
-                     _ encodingFactory: HTTPEncoding.Factory = HTTPEncoding.Factory(),
-                     _ multipartData: MultipartFormDataBuilderType? = nil) -> URLRequestBuilder {
+                     _ encodingFactory: HTTPEncoding.Factory = HTTPEncoding.Factory()) -> URLRequestBuilder {
         self.sendingData = data
         if data != nil {
             self.encodingFactory = encodingFactory
         } else {
             self.encodingFactory = nil
         }
-        self.multipartData = multipartData
         return self
     }
     
+    @discardableResult
+    func multipartDataBuilder(_ multipartData: MultipartFormDataBuilderType) -> URLRequestBuilder {
+        self.multipartDataBuilder = multipartData
+        return self
+    }
+    
+    @discardableResult
     func timeout(_ time: TimeInterval) -> URLRequestBuilder {
         self.timeoutInterval = time
         return self

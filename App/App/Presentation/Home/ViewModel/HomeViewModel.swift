@@ -12,13 +12,13 @@ import Utility
 class HomeViewModel: BaseViewModel {
     
     // Input
-    let repository: HomeRepository!
+    let repository: IHomeRepo!
     
     // Output
     let fetchData = PublishRelay<Void>()
     let navToDetail = PublishRelay<Void>()
     
-    init(repo: HomeRepository) {
+    init(repo: IHomeRepo) {
         self.repository = repo
         super.init()
     }

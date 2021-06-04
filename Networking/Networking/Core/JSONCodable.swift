@@ -7,9 +7,12 @@
 
 import Foundation
 
-class HTTPDecoding {
-    class Factory {
-        func create() -> JSONDecoder {
+open class HTTPDecoding {
+    open class Factory {
+        public init() {
+            
+        }
+        public func create() -> JSONDecoder {
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             return decoder
@@ -17,9 +20,12 @@ class HTTPDecoding {
     }
 }
 
-class HTTPEncoding {
-    class Factory {
-        func create() -> JSONEncoder {
+open class HTTPEncoding {
+    open class Factory {
+        public init() {
+            
+        }
+        public func create() -> JSONEncoder {
             let encoder = JSONEncoder()
             encoder.keyEncodingStrategy = .convertToSnakeCase
             return encoder

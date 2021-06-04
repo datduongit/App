@@ -99,7 +99,7 @@ protocol MultipartFormDataBuilderType {
 
 class MultipartFormDataBuilder: MultipartFormDataBuilderType {
 
-    lazy var boundary = String(format: "sapo.boundary.%08x%08x", arc4random(), arc4random())
+    lazy var boundary = String(format: "networking.boundary.%08x%08x", arc4random(), arc4random())
 
     private var httpBody = Data()
     private var forms = [MultipartFormDataType]()
