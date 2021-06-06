@@ -85,9 +85,9 @@
 			isa = PBXGroup;
 			children = (
 				37A2A1E12668BC2B00701C3F /* Logger.h */,
+				37A2A1FC2668BC7C00701C3F /* LogManager.swift */,
 				37A2A1F82668BC4600701C3F /* FileHandlerOutputStream.swift */,
 				37A2A1FA2668BC5400701C3F /* Log.swift */,
-				37A2A1FC2668BC7C00701C3F /* LogManager.swift */,
 				37A2A1E22668BC2B00701C3F /* Info.plist */,
 			);
 			path = Logger;
