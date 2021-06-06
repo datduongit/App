@@ -135,6 +135,10 @@ target 'UIComponent' do
   binary_pod 'Nuke', nuke_version
 end
 
+target 'Logger' do
+  project 'Logger/Logger.project'
+end
+
 target 'App' do
   project 'App/App.project'
   google_utilites
