@@ -8,5 +8,5 @@
 import RxSwift
 
 protocol IHomeRepo {
-    func getHomeService() -> Observable<[Home]>
+    func getHomeService() -> Single<[Home]>
 }

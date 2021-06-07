@@ -8,8 +8,8 @@
 import RxSwift
 
 class LocalHomeRepository: IHomeRepo {
-    func getHomeService() -> Observable<[Home]> {
-        return .empty()
+    func getHomeService() -> Single<[Home]> {
+        return Observable.from([]).asSingle()
     }
     
 }

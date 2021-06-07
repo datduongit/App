@@ -5,13 +5,13 @@ import Utility
 
 class RemoteHomeRepo: AppBaseRepo, IHomeRepo {
 
-    func getHomeService() -> Observable<[Home]> {
+    func getHomeService() -> Single<[Home]> {
         
         let service = invokeService(HomeApiService.self)
-        return Observable.create { obsever in
+        return Single<[Home]>.create { single in
             service.getListHomeInfo(complete: {
                 let result = ListConverter(HomeDataToHome()).convert(from: $0)
-                obsever.onNext(result)
+                single(.success(result))
             })
             return Disposables.create()
         }
