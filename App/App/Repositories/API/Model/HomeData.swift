@@ -8,13 +8,13 @@
 import Foundation
 
 struct HomeData: Decodable {
-    let displayType: String?
-    let priority: Int?
-    let englishLabel: String?
-    let localLabel: String?
-    let moreTargetUri: String?
-    let englishDetailLabel: String?
-    let localDetailLabel: String?
-    let resourceType: String?
-    let announcementIds: [Int]?
+    var displayType: String?
+    var priority: Int?
+    var englishLabel: String?
+    var localLabel: String?
+    var moreTargetUri: String?
+    var englishDetailLabel: String?
+    var localDetailLabel: String?
+    var resourceType: String?
+    var announcementIds: [Int]?
 }

@@ -12,11 +12,14 @@ import Utility
 class HomeViewModel: BaseViewModel {
     
     // Input
-    let repository: IHomeRepo!
+    let repository: IHomeRepo
+    
+    let homeModels = PublishRelay<[Home]>()
     
     // Output
     let fetchData = PublishRelay<Void>()
     let navToDetail = PublishRelay<Void>()
+    
     
     init(repo: IHomeRepo) {
         self.repository = repo
@@ -28,8 +31,8 @@ class HomeViewModel: BaseViewModel {
             .flatMapLatest { [unowned self] in
                 return self.repository.getHomeService()
             }
-            .mapToVoid()
-            .bind(to: navToDetail)
+            .bind(to: homeModels)
             .disposed(by: disposeBag)
+        
     }
 }

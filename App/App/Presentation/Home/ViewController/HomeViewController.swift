@@ -12,9 +12,9 @@ import RxCocoa
 
 class HomeViewController: BaseViewController {
     
-    let viewModel: HomeViewModel!
+    private let viewModel: HomeViewModel
     
-    @IBOutlet weak var actionDetail: UIButton!
+    @IBOutlet private weak var actionDetail: UIButton!
     
     init(viewModel: HomeViewModel) {
         self.viewModel = viewModel
@@ -29,6 +29,13 @@ class HomeViewController: BaseViewController {
         actionDetail
             .rx.tap
             .bind(to: viewModel.fetchData)
+            .disposed(by: disposeBag)
+        
+        viewModel
+            .homeModels
+            .bind(onNext: { data in
+                print(data.first?.priority)
+            })
             .disposed(by: disposeBag)
     }
 }

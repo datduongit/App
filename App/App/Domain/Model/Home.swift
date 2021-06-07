@@ -8,5 +8,5 @@
 import Foundation
 
 struct Home {
-    
+    var priority: Int = 0
 }

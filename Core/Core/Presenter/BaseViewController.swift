@@ -18,4 +18,13 @@ open class BaseViewController: UIViewController {
     }
     
     open func bind() {}
+    
+    func showLoading() {
+        
+    }
+    
+    func hideLoading() {
+        
+    }
+    
 }

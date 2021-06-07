@@ -14,7 +14,8 @@ struct HomeDataToHome: IConverter {
     typealias DestinationType = Home
     
     func convert(from sourceType: HomeData) -> Home {
-        let home = Home()
+        var home = Home()
+        home.priority = sourceType.priority ?? 0
         return home
     }
 }
