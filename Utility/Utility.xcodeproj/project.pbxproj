@@ -10,10 +10,6 @@
 		04D8411A266758FC004E3957 /* Utility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D84110266758FC004E3957 /* Utility.framework */; };
 		04D8411F266758FC004E3957 /* UtilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D8411E266758FC004E3957 /* UtilityTests.swift */; };
 		04D84121266758FC004E3957 /* Utility.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D84113266758FC004E3957 /* Utility.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		04D8416626676000004E3957 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D8416226676000004E3957 /* Functions.swift */; };
-		04D8416726676000004E3957 /* Observable+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D8416326676000004E3957 /* Observable+Utils.swift */; };
-		04D8416826676000004E3957 /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D8416426676000004E3957 /* ErrorTracker.swift */; };
-		04D8416926676000004E3957 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D8416526676000004E3957 /* ActivityIndicator.swift */; };
 		04D841742667600E004E3957 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D8416E2667600E004E3957 /* Date+Extension.swift */; };
 		04D841752667600E004E3957 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D8416F2667600E004E3957 /* Collection+Extension.swift */; };
 		04D841762667600E004E3957 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D841702667600E004E3957 /* String+Extension.swift */; };
@@ -40,10 +36,6 @@
 		04D84119266758FC004E3957 /* UtilityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UtilityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D8411E266758FC004E3957 /* UtilityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityTests.swift; sourceTree = "<group>"; };
 		04D84120266758FC004E3957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04D8416226676000004E3957 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
-		04D8416326676000004E3957 /* Observable+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+Utils.swift"; sourceTree = "<group>"; };
-		04D8416426676000004E3957 /* ErrorTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorTracker.swift; sourceTree = "<group>"; };
-		04D8416526676000004E3957 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		04D8416E2667600E004E3957 /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		04D8416F2667600E004E3957 /* Collection+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
 		04D841702667600E004E3957 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
@@ -99,7 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				04D8416D2667600E004E3957 /* Extensions */,
-				04D8416126676000004E3957 /* Rx */,
 				04D84113266758FC004E3957 /* Utility.h */,
 				04D84114266758FC004E3957 /* Info.plist */,
 			);
@@ -113,17 +104,6 @@
 				04D84120266758FC004E3957 /* Info.plist */,
 			);
 			path = UtilityTests;
-			sourceTree = "<group>";
-		};
-		04D8416126676000004E3957 /* Rx */ = {
-			isa = PBXGroup;
-			children = (
-				04D8416226676000004E3957 /* Functions.swift */,
-				04D8416326676000004E3957 /* Observable+Utils.swift */,
-				04D8416426676000004E3957 /* ErrorTracker.swift */,
-				04D8416526676000004E3957 /* ActivityIndicator.swift */,
-			);
-			path = Rx;
 			sourceTree = "<group>";
 		};
 		04D8416D2667600E004E3957 /* Extensions */ = {
@@ -293,12 +273,8 @@
 			files = (
 				04D841762667600E004E3957 /* String+Extension.swift in Sources */,
 				04D841782667600E004E3957 /* Color+Extension.swift in Sources */,
-				04D8416926676000004E3957 /* ActivityIndicator.swift in Sources */,
 				04D841772667600E004E3957 /* Foundation+Extension.swift in Sources */,
 				04D841752667600E004E3957 /* Collection+Extension.swift in Sources */,
-				04D8416726676000004E3957 /* Observable+Utils.swift in Sources */,
-				04D8416826676000004E3957 /* ErrorTracker.swift in Sources */,
-				04D8416626676000004E3957 /* Functions.swift in Sources */,
 				04D841742667600E004E3957 /* Date+Extension.swift in Sources */,
 				04D841792667600E004E3957 /* Number+Extension.swift in Sources */,
 			);

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041AC35B266DEFCD00022A68 /* Observable+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041AC35A266DEFCD00022A68 /* Observable+Utils.swift */; };
+		041AC35D266DEFF100022A68 /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041AC35C266DEFF100022A68 /* ErrorTracker.swift */; };
+		041AC35F266DF03600022A68 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041AC35E266DF03600022A68 /* ActivityIndicator.swift */; };
 		04D840D226675849004E3957 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D840C826675849004E3957 /* Core.framework */; };
 		04D840D726675849004E3957 /* CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D840D626675849004E3957 /* CoreTests.swift */; };
 		04D840D926675849004E3957 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D840CB26675849004E3957 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -33,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		041AC35A266DEFCD00022A68 /* Observable+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Utils.swift"; sourceTree = "<group>"; };
+		041AC35C266DEFF100022A68 /* ErrorTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTracker.swift; sourceTree = "<group>"; };
+		041AC35E266DF03600022A68 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		04D840C826675849004E3957 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D840CB26675849004E3957 /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		04D840CC26675849004E3957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -73,6 +79,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		041AC359266DEF7500022A68 /* Rx */ = {
+			isa = PBXGroup;
+			children = (
+				041AC35A266DEFCD00022A68 /* Observable+Utils.swift */,
+				041AC35C266DEFF100022A68 /* ErrorTracker.swift */,
+				041AC35E266DF03600022A68 /* ActivityIndicator.swift */,
+			);
+			path = Rx;
+			sourceTree = "<group>";
+		};
 		04D840BE26675849004E3957 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +112,7 @@
 		04D840CA26675849004E3957 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				041AC359266DEF7500022A68 /* Rx */,
 				04D842072667795B004E3957 /* Presenter */,
 				04D841C826676449004E3957 /* AppState */,
 				04D8413C26675E49004E3957 /* Preference */,
@@ -312,10 +329,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				041AC35B266DEFCD00022A68 /* Observable+Utils.swift in Sources */,
 				04D8413B26675E2B004E3957 /* Coordinator.swift in Sources */,
 				04D8413A26675E2B004E3957 /* RxCoordinator.swift in Sources */,
 				04D8414626675E49004E3957 /* Presentable.swift in Sources */,
+				041AC35F266DF03600022A68 /* ActivityIndicator.swift in Sources */,
 				04D841CA26676449004E3957 /* AppStateEvent.swift in Sources */,
+				041AC35D266DEFF100022A68 /* ErrorTracker.swift in Sources */,
 				04D8414726675E49004E3957 /* Router.swift in Sources */,
 				04D84216266782CB004E3957 /* BaseViewModel.swift in Sources */,
 				04D8420926677988004E3957 /* BaseViewController.swift in Sources */,

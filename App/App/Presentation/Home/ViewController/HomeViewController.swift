@@ -10,32 +10,30 @@ import Core
 import RxSwift
 import RxCocoa
 
-class HomeViewController: BaseViewController {
-    
-    private let viewModel: HomeViewModel
+class HomeViewController: BaseViewController<HomeViewModel> {
     
     @IBOutlet private weak var actionDetail: UIButton!
-    
-    init(viewModel: HomeViewModel) {
-        self.viewModel = viewModel
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     
     override func bind() {
         actionDetail
             .rx.tap
-            .bind(to: viewModel.fetchData)
+            .bind(to: self.viewModel.fetchData)
             .disposed(by: disposeBag)
         
-        viewModel
+        self.viewModel
             .homeModels
             .bind(onNext: { data in
-                print(data.first?.priority)
+                print(data.first?.priority ?? 0)
             })
             .disposed(by: disposeBag)
+        
+        self.viewModel
+            .isLoading
+            .asDriverOnErrorJustComplete()
+            .drive(onNext: {
+                print("isLoading: \($0)")
+            })
+            .disposed(by: disposeBag)
+            
     }
 }

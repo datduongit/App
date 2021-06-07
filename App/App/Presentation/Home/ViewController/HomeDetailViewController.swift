@@ -7,24 +7,13 @@
 import Core
 import UIKit
 
-class HomeDetailViewController: BaseViewController {
-    
-    let viewModel: HomeDetailViewModel!
+class HomeDetailViewController: BaseViewController<HomeDetailViewModel> {
     
     @IBOutlet weak var actionBack: UIButton!
     
-    init(viewModel: HomeDetailViewModel) {
-        self.viewModel = viewModel
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     override func bind() {
         actionBack.rx.tap
-            .bind(to: viewModel.popToHome)
-            .disposed(by: disposeBag)
+            .bind(to: self.viewModel.popToHome)
+            .disposed(by: self.disposeBag)
     }
 }

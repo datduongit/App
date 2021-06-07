@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041AC40D266E0DCE00022A68 /* Logger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041AC40C266E0DCE00022A68 /* Logger.framework */; };
 		04D840AE26675800004E3957 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D840A426675800004E3957 /* Networking.framework */; };
 		04D840B326675800004E3957 /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D840B226675800004E3957 /* NetworkingTests.swift */; };
 		04D840B526675800004E3957 /* Networking.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D840A726675800004E3957 /* Networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		041AC40C266E0DCE00022A68 /* Logger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Logger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D840A426675800004E3957 /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D840A726675800004E3957 /* Networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
 		04D840A826675800004E3957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				041AC40D266E0DCE00022A68 /* Logger.framework in Frameworks */,
 				D53124D525227C1D96D92845 /* Pods_Networking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,6 +153,7 @@
 		19D9FE2C0606A5DDF9632972 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				041AC40C266E0DCE00022A68 /* Logger.framework */,
 				6B0B428E6AA5D76F2296488D /* Pods_Networking.framework */,
 			);
 			name = Frameworks;
