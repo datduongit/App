@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041AC3C6266DFC6B00022A68 /* Logger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A2A20E2668BD1400701C3F /* Logger.framework */; };
+		041AC3C7266DFC6B00022A68 /* Logger.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37A2A20E2668BD1400701C3F /* Logger.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		04D8412B26675A58004E3957 /* Utility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D8412A26675A58004E3957 /* Utility.framework */; };
 		04D8412C26675A58004E3957 /* Utility.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04D8412A26675A58004E3957 /* Utility.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		04D8412F26675A62004E3957 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D8412E26675A62004E3957 /* Core.framework */; };
@@ -45,8 +47,6 @@
 		3763D22D266A009300901CE5 /* AppApiServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3763D22C266A009300901CE5 /* AppApiServiceFactory.swift */; };
 		3763D230266A03FA00901CE5 /* HomeApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3763D22F266A03FA00901CE5 /* HomeApiService.swift */; };
 		3763D234266A04E000901CE5 /* App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3763D232266A04E000901CE5 /* App.xcdatamodeld */; };
-		37A2A2112668BD5B00701C3F /* Logger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A2A20E2668BD1400701C3F /* Logger.framework */; };
-		37A2A2122668BD5B00701C3F /* Logger.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37A2A20E2668BD1400701C3F /* Logger.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		37AE6120266DC73600A1EE19 /* AppDelegate+APNs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AE611F266DC73600A1EE19 /* AppDelegate+APNs.swift */; };
 		37AE6123266DC98E00A1EE19 /* DictionUtls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AE6122266DC98E00A1EE19 /* DictionUtls.swift */; };
 		37AE612F266DDAD500A1EE19 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37AE612C266DDAD500A1EE19 /* GoogleService-Info.plist */; };
@@ -95,7 +95,7 @@
 				04D8412C26675A58004E3957 /* Utility.framework in Embed Frameworks */,
 				04D8413326675A69004E3957 /* UIComponent.framework in Embed Frameworks */,
 				04D8413026675A62004E3957 /* Core.framework in Embed Frameworks */,
-				37A2A2122668BD5B00701C3F /* Logger.framework in Embed Frameworks */,
+				041AC3C7266DFC6B00022A68 /* Logger.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,7 +165,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37A2A2112668BD5B00701C3F /* Logger.framework in Frameworks */,
+				041AC3C6266DFC6B00022A68 /* Logger.framework in Frameworks */,
 				8A95E7774FB7DE66FDA7FC66 /* Pods_App.framework in Frameworks */,
 				04D8412F26675A62004E3957 /* Core.framework in Frameworks */,
 				04D8413226675A69004E3957 /* UIComponent.framework in Frameworks */,

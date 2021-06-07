@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041AC407266E072B00022A68 /* Logger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37AE6125266DD5CA00A1EE19 /* Logger.framework */; };
 		04D840AE26675800004E3957 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D840A426675800004E3957 /* Networking.framework */; };
 		04D840B326675800004E3957 /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D840B226675800004E3957 /* NetworkingTests.swift */; };
 		04D840B526675800004E3957 /* Networking.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D840A726675800004E3957 /* Networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -33,8 +34,6 @@
 		37A2A23D2668CD9100701C3F /* EmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A23C2668CD9100701C3F /* EmptyResponse.swift */; };
 		37A2A2412668E01900701C3F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A2402668E01900701C3F /* Extensions.swift */; };
 		37A2A2432668EAFE00701C3F /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A2422668EAFE00701C3F /* APIService.swift */; };
-		37AE6126266DD5CA00A1EE19 /* Logger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37AE6125266DD5CA00A1EE19 /* Logger.framework */; };
-		37AE6127266DD5CA00A1EE19 /* Logger.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37AE6125266DD5CA00A1EE19 /* Logger.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D53124D525227C1D96D92845 /* Pods_Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0B428E6AA5D76F2296488D /* Pods_Networking.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,21 +47,8 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		37AE6128266DD5CA00A1EE19 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				37AE6127266DD5CA00A1EE19 /* Logger.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		041AC3C9266DFCAC00022A68 /* Logger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Logger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D840A426675800004E3957 /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D840A726675800004E3957 /* Networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
 		04D840A826675800004E3957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -103,7 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37AE6126266DD5CA00A1EE19 /* Logger.framework in Frameworks */,
+				041AC407266E072B00022A68 /* Logger.framework in Frameworks */,
 				D53124D525227C1D96D92845 /* Pods_Networking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -168,6 +154,7 @@
 		19D9FE2C0606A5DDF9632972 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				041AC3C9266DFCAC00022A68 /* Logger.framework */,
 				37AE6125266DD5CA00A1EE19 /* Logger.framework */,
 				6B0B428E6AA5D76F2296488D /* Pods_Networking.framework */,
 			);
@@ -246,7 +233,6 @@
 				04D840A026675800004E3957 /* Sources */,
 				04D840A126675800004E3957 /* Frameworks */,
 				04D840A226675800004E3957 /* Resources */,
-				37AE6128266DD5CA00A1EE19 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

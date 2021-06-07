@@ -8,7 +8,7 @@
 import Foundation
 import os
 
-private let subsystem: String = "com.ftech.mobile"
+private let subsystem: String = "ftech.ai.Logger"
 
 public protocol WebsocketClientType {
     func send(message: String)
@@ -48,7 +48,7 @@ public class Log {
     private static let network: OSLog = OSLog(subsystem: subsystem, category: Category.network.rawValue)
     
     private let dateFormatter: DateFormatter
-    private let queue: DispatchQueue = DispatchQueue(label: "vn.sapo.swift-logger",
+    private let queue: DispatchQueue = DispatchQueue(label: "ftech.ai.Logger",
                                                      qos: .utility)
     
     public func log(category: Category = .default,

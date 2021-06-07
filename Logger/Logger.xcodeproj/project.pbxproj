@@ -7,142 +7,142 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		29B763D834B367868CBFCAA7 /* Pods_Logger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563CD4A23CAD036751A4234C /* Pods_Logger.framework */; };
-		37A2A1E82668BC2B00701C3F /* Logger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A2A1DE2668BC2B00701C3F /* Logger.framework */; };
-		37A2A1ED2668BC2B00701C3F /* LoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A1EC2668BC2B00701C3F /* LoggerTests.swift */; };
-		37A2A1EF2668BC2B00701C3F /* Logger.h in Headers */ = {isa = PBXBuildFile; fileRef = 37A2A1E12668BC2B00701C3F /* Logger.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		37A2A1F92668BC4600701C3F /* FileHandlerOutputStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A1F82668BC4600701C3F /* FileHandlerOutputStream.swift */; };
-		37A2A1FB2668BC5400701C3F /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A1FA2668BC5400701C3F /* Log.swift */; };
-		37A2A1FD2668BC7C00701C3F /* LogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2A1FC2668BC7C00701C3F /* LogManager.swift */; };
+		041AC3E8266E038400022A68 /* Logger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041AC3DE266E038400022A68 /* Logger.framework */; };
+		041AC3ED266E038400022A68 /* LoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041AC3EC266E038400022A68 /* LoggerTests.swift */; };
+		041AC3EF266E038400022A68 /* Logger.h in Headers */ = {isa = PBXBuildFile; fileRef = 041AC3E1266E038400022A68 /* Logger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		041AC403266E043000022A68 /* LogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041AC400266E043000022A68 /* LogManager.swift */; };
+		041AC404266E043000022A68 /* FileHandlerOutputStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041AC401266E043000022A68 /* FileHandlerOutputStream.swift */; };
+		041AC405266E043000022A68 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041AC402266E043000022A68 /* Log.swift */; };
+		D2BDF205290871BC64F4B8CF /* Pods_Logger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71E5F5734C1DBCC70163AC8E /* Pods_Logger.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		37A2A1E92668BC2B00701C3F /* PBXContainerItemProxy */ = {
+		041AC3E9266E038400022A68 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 37A2A1D52668BC2B00701C3F /* Project object */;
+			containerPortal = 041AC3D5266E038400022A68 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 37A2A1DD2668BC2B00701C3F;
+			remoteGlobalIDString = 041AC3DD266E038400022A68;
 			remoteInfo = Logger;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3665A729B42045A3BE627628 /* Pods-Logger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Logger.debug.xcconfig"; path = "Target Support Files/Pods-Logger/Pods-Logger.debug.xcconfig"; sourceTree = "<group>"; };
-		37A2A1DE2668BC2B00701C3F /* Logger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Logger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		37A2A1E12668BC2B00701C3F /* Logger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
-		37A2A1E22668BC2B00701C3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		37A2A1E72668BC2B00701C3F /* LoggerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoggerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		37A2A1EC2668BC2B00701C3F /* LoggerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerTests.swift; sourceTree = "<group>"; };
-		37A2A1EE2668BC2B00701C3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		37A2A1F82668BC4600701C3F /* FileHandlerOutputStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHandlerOutputStream.swift; sourceTree = "<group>"; };
-		37A2A1FA2668BC5400701C3F /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
-		37A2A1FC2668BC7C00701C3F /* LogManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogManager.swift; sourceTree = "<group>"; };
-		3CD387E44A0686B17827E172 /* Pods-Logger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Logger.release.xcconfig"; path = "Target Support Files/Pods-Logger/Pods-Logger.release.xcconfig"; sourceTree = "<group>"; };
-		563CD4A23CAD036751A4234C /* Pods_Logger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Logger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		041AC3DE266E038400022A68 /* Logger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Logger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		041AC3E1266E038400022A68 /* Logger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
+		041AC3E2266E038400022A68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		041AC3E7266E038400022A68 /* LoggerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoggerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		041AC3EC266E038400022A68 /* LoggerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerTests.swift; sourceTree = "<group>"; };
+		041AC3EE266E038400022A68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		041AC400266E043000022A68 /* LogManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogManager.swift; sourceTree = "<group>"; };
+		041AC401266E043000022A68 /* FileHandlerOutputStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileHandlerOutputStream.swift; sourceTree = "<group>"; };
+		041AC402266E043000022A68 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		71E5F5734C1DBCC70163AC8E /* Pods_Logger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Logger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7342516F4F5DC7C6762B435B /* Pods-Logger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Logger.release.xcconfig"; path = "Target Support Files/Pods-Logger/Pods-Logger.release.xcconfig"; sourceTree = "<group>"; };
+		DA1E0E3CC4FBD7E6F6689D77 /* Pods-Logger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Logger.debug.xcconfig"; path = "Target Support Files/Pods-Logger/Pods-Logger.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		37A2A1DB2668BC2B00701C3F /* Frameworks */ = {
+		041AC3DB266E038400022A68 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29B763D834B367868CBFCAA7 /* Pods_Logger.framework in Frameworks */,
+				D2BDF205290871BC64F4B8CF /* Pods_Logger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		37A2A1E42668BC2B00701C3F /* Frameworks */ = {
+		041AC3E4266E038400022A68 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37A2A1E82668BC2B00701C3F /* Logger.framework in Frameworks */,
+				041AC3E8266E038400022A68 /* Logger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		37A2A1D42668BC2B00701C3F = {
+		041AC3D4266E038400022A68 = {
 			isa = PBXGroup;
 			children = (
-				37A2A1E02668BC2B00701C3F /* Logger */,
-				37A2A1EB2668BC2B00701C3F /* LoggerTests */,
-				37A2A1DF2668BC2B00701C3F /* Products */,
-				F0EA0B359CF8586DD93C1DA8 /* Pods */,
-				C2D4E7C71E0552EA6B1727C7 /* Frameworks */,
+				041AC3E0266E038400022A68 /* Logger */,
+				041AC3EB266E038400022A68 /* LoggerTests */,
+				041AC3DF266E038400022A68 /* Products */,
+				2FDC8236F0C4C76D73352EE9 /* Pods */,
+				EA222BF04A5AB681E5101A83 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		37A2A1DF2668BC2B00701C3F /* Products */ = {
+		041AC3DF266E038400022A68 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				37A2A1DE2668BC2B00701C3F /* Logger.framework */,
-				37A2A1E72668BC2B00701C3F /* LoggerTests.xctest */,
+				041AC3DE266E038400022A68 /* Logger.framework */,
+				041AC3E7266E038400022A68 /* LoggerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		37A2A1E02668BC2B00701C3F /* Logger */ = {
+		041AC3E0266E038400022A68 /* Logger */ = {
 			isa = PBXGroup;
 			children = (
-				37A2A1E12668BC2B00701C3F /* Logger.h */,
-				37A2A1FC2668BC7C00701C3F /* LogManager.swift */,
-				37A2A1F82668BC4600701C3F /* FileHandlerOutputStream.swift */,
-				37A2A1FA2668BC5400701C3F /* Log.swift */,
-				37A2A1E22668BC2B00701C3F /* Info.plist */,
+				041AC401266E043000022A68 /* FileHandlerOutputStream.swift */,
+				041AC402266E043000022A68 /* Log.swift */,
+				041AC400266E043000022A68 /* LogManager.swift */,
+				041AC3E1266E038400022A68 /* Logger.h */,
+				041AC3E2266E038400022A68 /* Info.plist */,
 			);
 			path = Logger;
 			sourceTree = "<group>";
 		};
-		37A2A1EB2668BC2B00701C3F /* LoggerTests */ = {
+		041AC3EB266E038400022A68 /* LoggerTests */ = {
 			isa = PBXGroup;
 			children = (
-				37A2A1EC2668BC2B00701C3F /* LoggerTests.swift */,
-				37A2A1EE2668BC2B00701C3F /* Info.plist */,
+				041AC3EC266E038400022A68 /* LoggerTests.swift */,
+				041AC3EE266E038400022A68 /* Info.plist */,
 			);
 			path = LoggerTests;
 			sourceTree = "<group>";
 		};
-		C2D4E7C71E0552EA6B1727C7 /* Frameworks */ = {
+		2FDC8236F0C4C76D73352EE9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				563CD4A23CAD036751A4234C /* Pods_Logger.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F0EA0B359CF8586DD93C1DA8 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				3665A729B42045A3BE627628 /* Pods-Logger.debug.xcconfig */,
-				3CD387E44A0686B17827E172 /* Pods-Logger.release.xcconfig */,
+				DA1E0E3CC4FBD7E6F6689D77 /* Pods-Logger.debug.xcconfig */,
+				7342516F4F5DC7C6762B435B /* Pods-Logger.release.xcconfig */,
 			);
 			name = Pods;
 			path = ../Pods;
 			sourceTree = "<group>";
 		};
+		EA222BF04A5AB681E5101A83 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				71E5F5734C1DBCC70163AC8E /* Pods_Logger.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		37A2A1D92668BC2B00701C3F /* Headers */ = {
+		041AC3D9266E038400022A68 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37A2A1EF2668BC2B00701C3F /* Logger.h in Headers */,
+				041AC3EF266E038400022A68 /* Logger.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		37A2A1DD2668BC2B00701C3F /* Logger */ = {
+		041AC3DD266E038400022A68 /* Logger */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 37A2A1F22668BC2B00701C3F /* Build configuration list for PBXNativeTarget "Logger" */;
+			buildConfigurationList = 041AC3F2266E038400022A68 /* Build configuration list for PBXNativeTarget "Logger" */;
 			buildPhases = (
-				B39ED6F0C8DC9143121C3DBA /* [CP] Check Pods Manifest.lock */,
-				37A2A1D92668BC2B00701C3F /* Headers */,
-				37A2A1DA2668BC2B00701C3F /* Sources */,
-				37A2A1DB2668BC2B00701C3F /* Frameworks */,
-				37A2A1DC2668BC2B00701C3F /* Resources */,
+				75309D7DF452E397FEB82501 /* [CP] Check Pods Manifest.lock */,
+				041AC3D9266E038400022A68 /* Headers */,
+				041AC3DA266E038400022A68 /* Sources */,
+				041AC3DB266E038400022A68 /* Frameworks */,
+				041AC3DC266E038400022A68 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -150,46 +150,46 @@
 			);
 			name = Logger;
 			productName = Logger;
-			productReference = 37A2A1DE2668BC2B00701C3F /* Logger.framework */;
+			productReference = 041AC3DE266E038400022A68 /* Logger.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		37A2A1E62668BC2B00701C3F /* LoggerTests */ = {
+		041AC3E6266E038400022A68 /* LoggerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 37A2A1F52668BC2B00701C3F /* Build configuration list for PBXNativeTarget "LoggerTests" */;
+			buildConfigurationList = 041AC3F5266E038400022A68 /* Build configuration list for PBXNativeTarget "LoggerTests" */;
 			buildPhases = (
-				37A2A1E32668BC2B00701C3F /* Sources */,
-				37A2A1E42668BC2B00701C3F /* Frameworks */,
-				37A2A1E52668BC2B00701C3F /* Resources */,
+				041AC3E3266E038400022A68 /* Sources */,
+				041AC3E4266E038400022A68 /* Frameworks */,
+				041AC3E5266E038400022A68 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				37A2A1EA2668BC2B00701C3F /* PBXTargetDependency */,
+				041AC3EA266E038400022A68 /* PBXTargetDependency */,
 			);
 			name = LoggerTests;
 			productName = LoggerTests;
-			productReference = 37A2A1E72668BC2B00701C3F /* LoggerTests.xctest */;
+			productReference = 041AC3E7266E038400022A68 /* LoggerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		37A2A1D52668BC2B00701C3F /* Project object */ = {
+		041AC3D5266E038400022A68 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
-					37A2A1DD2668BC2B00701C3F = {
+					041AC3DD266E038400022A68 = {
 						CreatedOnToolsVersion = 12.5;
 						LastSwiftMigration = 1250;
 					};
-					37A2A1E62668BC2B00701C3F = {
+					041AC3E6266E038400022A68 = {
 						CreatedOnToolsVersion = 12.5;
 					};
 				};
 			};
-			buildConfigurationList = 37A2A1D82668BC2B00701C3F /* Build configuration list for PBXProject "Logger" */;
+			buildConfigurationList = 041AC3D8266E038400022A68 /* Build configuration list for PBXProject "Logger" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -197,26 +197,26 @@
 				en,
 				Base,
 			);
-			mainGroup = 37A2A1D42668BC2B00701C3F;
-			productRefGroup = 37A2A1DF2668BC2B00701C3F /* Products */;
+			mainGroup = 041AC3D4266E038400022A68;
+			productRefGroup = 041AC3DF266E038400022A68 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				37A2A1DD2668BC2B00701C3F /* Logger */,
-				37A2A1E62668BC2B00701C3F /* LoggerTests */,
+				041AC3DD266E038400022A68 /* Logger */,
+				041AC3E6266E038400022A68 /* LoggerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		37A2A1DC2668BC2B00701C3F /* Resources */ = {
+		041AC3DC266E038400022A68 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		37A2A1E52668BC2B00701C3F /* Resources */ = {
+		041AC3E5266E038400022A68 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -226,7 +226,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B39ED6F0C8DC9143121C3DBA /* [CP] Check Pods Manifest.lock */ = {
+		75309D7DF452E397FEB82501 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -251,36 +251,36 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		37A2A1DA2668BC2B00701C3F /* Sources */ = {
+		041AC3DA266E038400022A68 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37A2A1FD2668BC7C00701C3F /* LogManager.swift in Sources */,
-				37A2A1FB2668BC5400701C3F /* Log.swift in Sources */,
-				37A2A1F92668BC4600701C3F /* FileHandlerOutputStream.swift in Sources */,
+				041AC403266E043000022A68 /* LogManager.swift in Sources */,
+				041AC404266E043000022A68 /* FileHandlerOutputStream.swift in Sources */,
+				041AC405266E043000022A68 /* Log.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		37A2A1E32668BC2B00701C3F /* Sources */ = {
+		041AC3E3266E038400022A68 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37A2A1ED2668BC2B00701C3F /* LoggerTests.swift in Sources */,
+				041AC3ED266E038400022A68 /* LoggerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		37A2A1EA2668BC2B00701C3F /* PBXTargetDependency */ = {
+		041AC3EA266E038400022A68 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 37A2A1DD2668BC2B00701C3F /* Logger */;
-			targetProxy = 37A2A1E92668BC2B00701C3F /* PBXContainerItemProxy */;
+			target = 041AC3DD266E038400022A68 /* Logger */;
+			targetProxy = 041AC3E9266E038400022A68 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		37A2A1F02668BC2B00701C3F /* Debug */ = {
+		041AC3F0266E038400022A68 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -344,7 +344,7 @@
 			};
 			name = Debug;
 		};
-		37A2A1F12668BC2B00701C3F /* Release */ = {
+		041AC3F1266E038400022A68 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -402,9 +402,9 @@
 			};
 			name = Release;
 		};
-		37A2A1F32668BC2B00701C3F /* Debug */ = {
+		041AC3F3266E038400022A68 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3665A729B42045A3BE627628 /* Pods-Logger.debug.xcconfig */;
+			baseConfigurationReference = DA1E0E3CC4FBD7E6F6689D77 /* Pods-Logger.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -420,7 +420,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.chungtv.Logger;
+				PRODUCT_BUNDLE_IDENTIFIER = ftech.ai.Logger;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
@@ -430,9 +430,9 @@
 			};
 			name = Debug;
 		};
-		37A2A1F42668BC2B00701C3F /* Release */ = {
+		041AC3F4266E038400022A68 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3CD387E44A0686B17827E172 /* Pods-Logger.release.xcconfig */;
+			baseConfigurationReference = 7342516F4F5DC7C6762B435B /* Pods-Logger.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -448,7 +448,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.chungtv.Logger;
+				PRODUCT_BUNDLE_IDENTIFIER = ftech.ai.Logger;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
@@ -457,7 +457,7 @@
 			};
 			name = Release;
 		};
-		37A2A1F62668BC2B00701C3F /* Debug */ = {
+		041AC3F6266E038400022A68 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -468,14 +468,14 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.chungtv.LoggerTests;
+				PRODUCT_BUNDLE_IDENTIFIER = ftech.ai.LoggerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		37A2A1F72668BC2B00701C3F /* Release */ = {
+		041AC3F7266E038400022A68 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -486,7 +486,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.chungtv.LoggerTests;
+				PRODUCT_BUNDLE_IDENTIFIER = ftech.ai.LoggerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -496,34 +496,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		37A2A1D82668BC2B00701C3F /* Build configuration list for PBXProject "Logger" */ = {
+		041AC3D8266E038400022A68 /* Build configuration list for PBXProject "Logger" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				37A2A1F02668BC2B00701C3F /* Debug */,
-				37A2A1F12668BC2B00701C3F /* Release */,
+				041AC3F0266E038400022A68 /* Debug */,
+				041AC3F1266E038400022A68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		37A2A1F22668BC2B00701C3F /* Build configuration list for PBXNativeTarget "Logger" */ = {
+		041AC3F2266E038400022A68 /* Build configuration list for PBXNativeTarget "Logger" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				37A2A1F32668BC2B00701C3F /* Debug */,
-				37A2A1F42668BC2B00701C3F /* Release */,
+				041AC3F3266E038400022A68 /* Debug */,
+				041AC3F4266E038400022A68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		37A2A1F52668BC2B00701C3F /* Build configuration list for PBXNativeTarget "LoggerTests" */ = {
+		041AC3F5266E038400022A68 /* Build configuration list for PBXNativeTarget "LoggerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				37A2A1F62668BC2B00701C3F /* Debug */,
-				37A2A1F72668BC2B00701C3F /* Release */,
+				041AC3F6266E038400022A68 /* Debug */,
+				041AC3F7266E038400022A68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 37A2A1D52668BC2B00701C3F /* Project object */;
+	rootObject = 041AC3D5266E038400022A68 /* Project object */;
 }
