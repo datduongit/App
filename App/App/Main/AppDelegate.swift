@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }()
     
     internal var deviceToken: String?
+    internal var fcmToken: String?
     
     internal let container = Container()
     private var appCoordinator: AppCoordinator!
@@ -28,6 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         FirebaseApp.configure()
+        Messaging.messaging().delegate = self
+        
         // APNs
         registerForAPNs()
         

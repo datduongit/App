@@ -9,6 +9,7 @@ import UIKit
 import Core
 import RxSwift
 import RxCocoa
+import Logger
 
 class HomeViewController: BaseViewController {
     
@@ -33,8 +34,9 @@ class HomeViewController: BaseViewController {
         actionDetail
             .rx.tap
             .bind(onNext: { [weak self] _ in
-                if let deviceToken = AppDelegate.shared.deviceToken {
-                    UIPasteboard.general.string = deviceToken
+                if let fcmToken = AppDelegate.shared.fcmToken {
+                    UIPasteboard.general.string = fcmToken
+                    Log.d(fcmToken)
                     self?.showMessageCopy()
                 }
             })

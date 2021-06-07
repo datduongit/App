@@ -9,23 +9,25 @@ import Foundation
 import UserNotificationsUI
 import UserNotifications
 import Logger
+import Firebase
 
-extension AppDelegate: UNUserNotificationCenterDelegate {
+extension AppDelegate: UNUserNotificationCenterDelegate, MessagingDelegate {
     
     // MARK: - UNUserNotificationCenterDelegate
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 willPresent notification: UNNotification,
                                 withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         Log.d("[Notification]", "willPresent:", notification.request.content.userInfo.toJSON(beautify: true))
-        if #available(iOS 14.0, *) {
-            completionHandler(.banner)
-        } else {
-            completionHandler(.alert)
-        }
         
-//        let userInfo = notification.request.content.userInfo
-//
-//        let id = notification.request.identifier
+        let userInfo = notification.request.content.userInfo
+        //        let id = notification.request.identifier
+        Messaging.messaging().appDidReceiveMessage(userInfo)
+        
+        if #available(iOS 14.0, *) {
+            completionHandler([.banner, .sound])
+        } else {
+            completionHandler([.alert, .sound])
+        }
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter,
@@ -34,6 +36,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         let userInfo = response.notification.request.content.userInfo
         
         Log.d("[Notification]", "didReceive response:", userInfo.toJSON(beautify: true))
+        Messaging.messaging().appDidReceiveMessage(userInfo)
         
         if response.actionIdentifier == UNNotificationDefaultActionIdentifier {
             Log.d(userInfo)
@@ -44,10 +47,23 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     }
     
     func application(_ application: UIApplication,
+                     didReceiveRemoteNotification userInfo: [AnyHashable : Any],
+                     fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        Messaging.messaging().appDidReceiveMessage(userInfo)
+        completionHandler(.noData)
+    }
+    
+    func application(_ application: UIApplication,
                      didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        Messaging.messaging().apnsToken = deviceToken
         let token = deviceToken.map({ String(format: "%02x", $0) }).joined()
         self.deviceToken = token
         Log.d("deviceToken: \(token)")
+    }
+    
+    // MARK: - MessagingDelegate
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
+        self.fcmToken = fcmToken
     }
     
     func registerForAPNs() {
