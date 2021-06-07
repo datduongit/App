@@ -47,6 +47,8 @@
 		3763D234266A04E000901CE5 /* App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3763D232266A04E000901CE5 /* App.xcdatamodeld */; };
 		37A2A2112668BD5B00701C3F /* Logger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A2A20E2668BD1400701C3F /* Logger.framework */; };
 		37A2A2122668BD5B00701C3F /* Logger.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37A2A20E2668BD1400701C3F /* Logger.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		37AE6120266DC73600A1EE19 /* AppDelegate+APNs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AE611F266DC73600A1EE19 /* AppDelegate+APNs.swift */; };
+		37AE6123266DC98E00A1EE19 /* DictionUtls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AE6122266DC98E00A1EE19 /* DictionUtls.swift */; };
 		8A95E7774FB7DE66FDA7FC66 /* Pods_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A1AFEE413045245BF29C9C8 /* Pods_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -150,6 +152,9 @@
 		37A2A2062668BD1400701C3F /* Logger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
 		37A2A2072668BD1400701C3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37A2A2082668BD1400701C3F /* Logger.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Logger.xcodeproj; sourceTree = "<group>"; };
+		37AE611E266DC4EA00A1EE19 /* App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = App.entitlements; sourceTree = "<group>"; };
+		37AE611F266DC73600A1EE19 /* AppDelegate+APNs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+APNs.swift"; sourceTree = "<group>"; };
+		37AE6122266DC98E00A1EE19 /* DictionUtls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionUtls.swift; sourceTree = "<group>"; };
 		49C3ED9E2775CC83D19EE337 /* Pods-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.release.xcconfig"; path = "Target Support Files/Pods-App/Pods-App.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -198,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				04FF001E26671ACC003E8D96 /* AppDelegate.swift */,
+				37AE611F266DC73600A1EE19 /* AppDelegate+APNs.swift */,
 				04D841C0266762EC004E3957 /* AppCoordinator.swift */,
 				04D842052667773B004E3957 /* DIContainer.swift */,
 			);
@@ -344,10 +350,12 @@
 		04FF001D26671ACC003E8D96 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				37AE611E266DC4EA00A1EE19 /* App.entitlements */,
 				04D841C226676301004E3957 /* Main */,
 				04D8420E26677D56004E3957 /* Domain */,
 				04D8420F26677D6F004E3957 /* Repositories */,
 				0482A31126672B2C00428963 /* Presentation */,
+				37AE6121266DC97800A1EE19 /* Utilities */,
 				04FF002726671ACD003E8D96 /* Assets.xcassets */,
 				04FF002926671ACD003E8D96 /* LaunchScreen.storyboard */,
 				04FF002C26671ACD003E8D96 /* Info.plist */,
@@ -477,6 +485,14 @@
 				37A2A2102668BD1400701C3F /* LoggerTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		37AE6121266DC97800A1EE19 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				37AE6122266DC98E00A1EE19 /* DictionUtls.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		E9945B665D0EBE2EF4D00C60 /* Frameworks */ = {
@@ -708,8 +724,10 @@
 				3763D2272669FC1A00901CE5 /* Home.swift in Sources */,
 				3763D2292669FCED00901CE5 /* AppAPIEndpoint.swift in Sources */,
 				04D841D12667652F004E3957 /* SplashViewModel.swift in Sources */,
+				37AE6123266DC98E00A1EE19 /* DictionUtls.swift in Sources */,
 				3763D2222669FBB300901CE5 /* HomeDataToHome.swift in Sources */,
 				04D8421826679862004E3957 /* HomeDetailViewController.swift in Sources */,
+				37AE6120266DC73600A1EE19 /* AppDelegate+APNs.swift in Sources */,
 				3763D21F2669FB0200901CE5 /* APIConfig.swift in Sources */,
 				3763D230266A03FA00901CE5 /* HomeApiService.swift in Sources */,
 				3763D2152669E76C00901CE5 /* AppAPIService.swift in Sources */,
@@ -883,14 +901,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = App/App.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = TS5LABMG92;
 				INFOPLIST_FILE = App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ftech.ai.App;
+				PRODUCT_BUNDLE_IDENTIFIER = ai.ftech.NotifyDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = FTechNotifyDemo;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -902,14 +924,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = App/App.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = TS5LABMG92;
 				INFOPLIST_FILE = App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ftech.ai.App;
+				PRODUCT_BUNDLE_IDENTIFIER = ai.ftech.NotifyDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = FTechNotifyDemo;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

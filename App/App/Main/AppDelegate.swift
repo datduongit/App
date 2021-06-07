@@ -16,7 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     internal let container = Container()
     private var appCoordinator: AppCoordinator!
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        // APNs
+        registerForAPNs()
+        
         // DI
         DIContainer.inject(container)
         
