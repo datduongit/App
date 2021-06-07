@@ -16,10 +16,10 @@ class AppApiServiceFactory {
     
     static func create<T: AppAPIService>(_ service: T.Type) -> T {
         let token = "" // Get token from database
-        let client: HTTPClient
+        let client: AppHTTPClient
         if let builderInfo = instance.builderDict[CONFIG_CORE_MOBILE],
            builderInfo.valid(token) {
-            client = HTTPClient(session: URLSession(configuration: builderInfo.config))
+            client = AppHTTPClient(session: URLSession(configuration: builderInfo.config))
         } else {
             let config = URLSessionConfiguration.default
             // Increase number of simultaneous API requests
@@ -31,8 +31,9 @@ class AppApiServiceFactory {
             var builderInfo = BuilderInfo(config: config)
             builderInfo.token = token
             instance.builderDict[CONFIG_CORE_MOBILE] = builderInfo
-            client = HTTPClient(session: URLSession(configuration: config))
+            client = AppHTTPClient(session: URLSession(configuration: config))
         }
+        client.token = token
         return T(client: client)
     }
     

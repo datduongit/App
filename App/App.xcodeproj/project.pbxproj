@@ -37,6 +37,7 @@
 		04FF002B26671ACD003E8D96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04FF002926671ACD003E8D96 /* LaunchScreen.storyboard */; };
 		04FF003626671ACD003E8D96 /* AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FF003526671ACD003E8D96 /* AppTests.swift */; };
 		04FF004126671ACE003E8D96 /* AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FF004026671ACE003E8D96 /* AppUITests.swift */; };
+		373852AC266E250700E4F102 /* AppHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373852AB266E250700E4F102 /* AppHTTPClient.swift */; };
 		3763D2152669E76C00901CE5 /* AppAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3763D2142669E76C00901CE5 /* AppAPIService.swift */; };
 		3763D21F2669FB0200901CE5 /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3763D21E2669FB0200901CE5 /* APIConfig.swift */; };
 		3763D2222669FBB300901CE5 /* HomeDataToHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3763D2212669FBB300901CE5 /* HomeDataToHome.swift */; };
@@ -135,6 +136,7 @@
 		04FF004226671ACE003E8D96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A1AFEE413045245BF29C9C8 /* Pods_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B117982577FFA3B525E47FB /* Pods-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.debug.xcconfig"; path = "Target Support Files/Pods-App/Pods-App.debug.xcconfig"; sourceTree = "<group>"; };
+		373852AB266E250700E4F102 /* AppHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHTTPClient.swift; sourceTree = "<group>"; };
 		3763D2142669E76C00901CE5 /* AppAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAPIService.swift; sourceTree = "<group>"; };
 		3763D21E2669FB0200901CE5 /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
 		3763D2212669FBB300901CE5 /* HomeDataToHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataToHome.swift; sourceTree = "<group>"; };
@@ -397,6 +399,7 @@
 				3763D2282669FCED00901CE5 /* AppAPIEndpoint.swift */,
 				3763D22A266A001200901CE5 /* AppBaseRepo.swift */,
 				3763D22C266A009300901CE5 /* AppApiServiceFactory.swift */,
+				373852AB266E250700E4F102 /* AppHTTPClient.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -726,6 +729,7 @@
 				37AE6120266DC73600A1EE19 /* AppDelegate+APNs.swift in Sources */,
 				3763D21F2669FB0200901CE5 /* APIConfig.swift in Sources */,
 				3763D230266A03FA00901CE5 /* HomeApiService.swift in Sources */,
+				373852AC266E250700E4F102 /* AppHTTPClient.swift in Sources */,
 				3763D2152669E76C00901CE5 /* AppAPIService.swift in Sources */,
 				04D841E026676D94004E3957 /* HomeViewController.swift in Sources */,
 				04D841E826677234004E3957 /* RemoteHomeRepo.swift in Sources */,

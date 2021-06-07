@@ -7,11 +7,11 @@
 
 import Foundation
 
-open class APIService {
+open class APIService<T: HTTPClient> {
     
-    internal let client: HTTPClient
+    public let client: T
     
-    public required init(client: HTTPClient) {
+    public required init(client: T) {
         self.client = client
     }
     
