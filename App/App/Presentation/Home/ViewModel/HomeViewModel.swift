@@ -11,12 +11,10 @@ import Utility
 
 class HomeViewModel: BaseViewModel {
     
-    // Input
     let repository: IHomeRepo
     
     let homeModels = PublishRelay<[Home]>()
     
-    // Output
     let fetchData = PublishRelay<Void>()
     let navToDetail = PublishRelay<Void>()
     

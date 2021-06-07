@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="App" customModuleProvider="target">
             <connections>
                 <outlet property="actionDetail" destination="bKT-q7-1QZ" id="Hf6-KJ-73j"/>
+                <outlet property="messageLabel" destination="MBE-K5-HLt" id="xEt-O8-9s9"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Z3G-A4-Mtd"/>
             </connections>
         </placeholder>
@@ -20,13 +21,31 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKT-q7-1QZ">
-                    <rect key="frame" x="167.5" y="438" width="79" height="30"/>
-                    <state key="normal" title="Go to detail"/>
+                    <rect key="frame" x="143.5" y="438" width="127" height="30"/>
+                    <state key="normal" title="Copy device token"/>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copy successed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MBE-K5-HLt">
+                    <rect key="frame" x="32" y="500" width="350" height="32"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="K5D-TU-rMz"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="tmnCornerRadius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="MBE-K5-HLt" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="1wO-vj-JTf"/>
+                <constraint firstItem="MBE-K5-HLt" firstAttribute="top" secondItem="bKT-q7-1QZ" secondAttribute="bottom" constant="32" id="HfR-hn-EUq"/>
+                <constraint firstItem="MBE-K5-HLt" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="32" id="XrH-mg-qnk"/>
                 <constraint firstItem="bKT-q7-1QZ" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="dpk-XH-guA"/>
                 <constraint firstItem="bKT-q7-1QZ" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="o7W-H7-2vg"/>
             </constraints>

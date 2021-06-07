@@ -17,6 +17,11 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
                                 willPresent notification: UNNotification,
                                 withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         Log.d("[Notification]", "willPresent:", notification.request.content.userInfo.toJSON(beautify: true))
+        if #available(iOS 14.0, *) {
+            completionHandler(.banner)
+        } else {
+            completionHandler(.alert)
+        }
         
 //        let userInfo = notification.request.content.userInfo
 //
@@ -41,6 +46,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     func application(_ application: UIApplication,
                      didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         let token = deviceToken.map({ String(format: "%02x", $0) }).joined()
+        self.deviceToken = token
         Log.d("deviceToken: \(token)")
     }
     
