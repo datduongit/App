@@ -206,20 +206,20 @@ public extension UIView {
         return contentView
     }
     
-    func takeScreenshot(_ shouldSave: Bool = false) -> UIImage? {
-        var screenshotImage: UIImage?
-        let layer = UIApplication.shared.keyWindow!.layer
-        let scale = UIScreen.main.scale
-        UIGraphicsBeginImageContextWithOptions(layer.frame.size, false, scale)
-        guard let context = UIGraphicsGetCurrentContext() else {return nil}
-        layer.render(in: context)
-        screenshotImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        if let image = screenshotImage, shouldSave {
-            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
-        }
-        return screenshotImage
-    }
+//    func takeScreenshot(_ shouldSave: Bool = false) -> UIImage? {
+//        var screenshotImage: UIImage?
+//        let layer = UIApplication.shared.keyWindow!.layer
+//        let scale = UIScreen.main.scale
+//        UIGraphicsBeginImageContextWithOptions(layer.frame.size, false, scale)
+//        guard let context = UIGraphicsGetCurrentContext() else {return nil}
+//        layer.render(in: context)
+//        screenshotImage = UIGraphicsGetImageFromCurrentImageContext()
+//        UIGraphicsEndImageContext()
+//        if let image = screenshotImage, shouldSave {
+//            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+//        }
+//        return screenshotImage
+//    }
     
     func addSubviews(_ subviews: [UIView]) {
         subviews.forEach(addSubview(_:))

@@ -1,18 +1,11 @@
 deployment_target = '13.0'
 
-sv_progress_version = '~> 2.2.5'
 keychain_access_version = '~> 4.2.1'
+
 swifty_rsa_version = '1.6.0'
 swift_date_version = '6.3.1'
-swift_popup_version = '1.2.7'
 swift_iq_keyboard = '6.5.6'
 nuke_version = '9.5.0'
-firebase_analytic_version = '8.0.0'
-firebase_crashlytic_version = '8.0.0'
-firebase_cloud_messaging_version = '8.0.0'
-draw_signature_version = '1.0.0'
-realm_version = '10.8.0-beta.1'
-notification_banner_version = '3.0.6'
 
 platform :ios, deployment_target
 workspace 'App.xcworkspace'
@@ -75,13 +68,6 @@ def module_binary_pod(name)
   end
 end
 
-def google_utilites
-  google_utilities_version = '7.4.1'
-  gtm_session_fetcher_version = '1.5.0'
-
-  binary_pod 'GoogleUtilities', google_utilities_version
-  binary_pod 'GTMSessionFetcher', gtm_session_fetcher_version
-end
 
 def rxSwift
   rx_version = '~> 5.1.1'
@@ -97,27 +83,28 @@ def swiftInject
   binary_pod 'SwinjectAutoregistration', swinject_version
 end
 
-def networking
-  moya_version = '14.0.0'
-  moya_sugar_version = '~> 1.3.3'
-  object_mapper_version = '~> 4.2.0'
-
-  rxSwift
-  binary_pod 'Moya', moya_version
-  binary_pod 'Moya/RxSwift', moya_version
-  binary_pod 'MoyaSugar', moya_sugar_version
-  binary_pod 'ObjectMapper', object_mapper_version
+def firebase
+  firebase_analytic_version = '8.0.0'
+  firebase_crashlytic_version = '8.0.0'
+  firebase_cloud_messaging_version = '8.0.0'
+  google_utilities_version = '7.4.1'
+  gtm_session_fetcher_version = '1.5.0'
+  
+  binary_pod 'Firebase/Analytics', firebase_analytic_version
+  binary_pod 'Firebase/Crashlytics', firebase_crashlytic_version
+  binary_pod 'Firebase/Messaging', firebase_cloud_messaging_version
+#  binary_pod 'GoogleUtilities', google_utilities_version
+#  binary_pod 'GTMSessionFetcher', gtm_session_fetcher_version
 end
+
 
 target 'Utility' do
   project 'Utility/Utility.xcodeproj'
-  networking
   binary_pod 'SwiftDate', swift_date_version
 end
 
 target 'Networking' do
   project 'Networking/Networking.project'
-  networking
 end
 
 target 'Core' do
@@ -129,9 +116,6 @@ end
 
 target 'UIComponent' do
   project 'UIComponent/UIComponent.project'
-
-  rxSwift
-  binary_pod 'SVProgressHUD', sv_progress_version
   binary_pod 'Nuke', nuke_version
 end
 
@@ -141,25 +125,16 @@ end
 
 target 'App' do
   project 'App/App.project'
-  google_utilites
-  networking
   swiftInject
+  rxSwift
   netFox
-  binary_pod 'SVProgressHUD', sv_progress_version
+  firebase
   binary_pod 'KeychainAccess', keychain_access_version
   binary_pod 'SwiftyRSA', swifty_rsa_version
-  binary_pod 'ActionSheetPicker-3.0'
   binary_pod 'SwiftDate', swift_date_version
-  binary_pod 'SwiftEntryKit', swift_popup_version
   binary_pod 'IQKeyboardManagerSwift', swift_iq_keyboard
   binary_pod 'Nuke', nuke_version
-  binary_pod 'Firebase/Analytics', firebase_analytic_version
-  binary_pod 'Firebase/Crashlytics', firebase_crashlytic_version
-  binary_pod 'Firebase/Messaging', firebase_cloud_messaging_version
-  binary_pod 'DrawSignatureView', draw_signature_version
-
-  binary_pod 'AscendRealm', realm_version
-  binary_pod 'NotificationBannerSwift', notification_banner_version
+ 
 end
 
 post_install do |installer|
