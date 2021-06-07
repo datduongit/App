@@ -19,6 +19,6 @@ class AppAPIService: APIService<AppHTTPClient> {
     
     override func getDefaultHeaders() -> [String : String] {
         return [APIConfig.HEADER_CONTENT_TYPE: APIConfig.HEADER_CONTENT_TYPE_JSON,
-                "Token": client.token ?? ""]
+                "Token": client.token]
     }
 }

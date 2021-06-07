@@ -19,7 +19,7 @@ class AppApiServiceFactory {
         let client: AppHTTPClient
         if let builderInfo = instance.builderDict[CONFIG_CORE_MOBILE],
            builderInfo.valid(token) {
-            client = AppHTTPClient(session: URLSession(configuration: builderInfo.config))
+            client = AppHTTPClient(token: token, config: builderInfo.config)
         } else {
             let config = URLSessionConfiguration.default
             // Increase number of simultaneous API requests
@@ -31,9 +31,8 @@ class AppApiServiceFactory {
             var builderInfo = BuilderInfo(config: config)
             builderInfo.token = token
             instance.builderDict[CONFIG_CORE_MOBILE] = builderInfo
-            client = AppHTTPClient(session: URLSession(configuration: config))
+            client = AppHTTPClient(token: token, config: builderInfo.config)
         }
-        client.token = token
         return T(client: client)
     }
     
