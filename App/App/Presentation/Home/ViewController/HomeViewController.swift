@@ -20,14 +20,14 @@ class HomeViewController: BaseViewController<HomeViewModel> {
             .bind(to: self.viewModel.fetchData)
             .disposed(by: disposeBag)
         
-        self.viewModel
+        viewModel
             .homeModels
             .bind(onNext: { data in
                 print(data.first?.priority ?? 0)
             })
             .disposed(by: disposeBag)
         
-        self.viewModel
+        viewModel
             .isLoading
             .asDriverOnErrorJustComplete()
             .drive(onNext: {

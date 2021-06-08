@@ -10,17 +10,9 @@ import RxSwift
 import RxRelay
 import Utility
 
-class HomeViewModel: BaseViewModel, BaseViewModelType {
-    var input: HomeViewModelInput
-    var output: HomeViewModelOutput
+class HomeViewModel: BaseViewModel {
     
-    struct HomeViewModelInput {
-        let repo: IHomeRepo
-    }
-    
-    struct HomeViewModelOutput {
-        let navToDetail: Observable<Void>
-    }
+    let repo: IHomeRepo
     
     /// Transforms
     let homeModels = PublishRelay<[Home]>()
@@ -32,15 +24,14 @@ class HomeViewModel: BaseViewModel, BaseViewModelType {
     
     
     init(repo: IHomeRepo) {
-        self.input = HomeViewModelInput(repo: repo)
-        self.output = HomeViewModelOutput(navToDetail: navToDetail.asObservable())
+        self.repo = repo
         super.init()
     }
     
     override func bind() {
         fetchData
             .flatMapLatest { [unowned self] in
-                return self.input.repo
+                return self.repo
                     .getHomeService()
                     .trackActivity(activityIndicator)
             }
@@ -49,7 +40,7 @@ class HomeViewModel: BaseViewModel, BaseViewModelType {
         
         activityIndicator
             .asObservable()
-            .bind(to: self.isLoading)
+            .bind(to: isLoading)
             .disposed(by: disposeBag)
         
     }
