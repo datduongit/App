@@ -16,12 +16,33 @@ open class APIService<T: HTTPClient> {
     }
     
     @discardableResult
-    public func dataTask<R: Encodable, T: Decodable>(_ method: HTTPMethod,
-                                                     _ path: String,
-                                                     _ headers: [String: String]? = nil,
-                                                     _ params: ParametersType? = nil,
-                                                     _ sendingData: R? = nil,
-                                                     _ encoding: HTTPEncoding.Factory = HTTPEncoding.Factory(),
+    public func dataTask<T: Decodable>(method: HTTPMethod,
+                                       path: String,
+                                       headers: [String: String]? = nil,
+                                       params: ParametersType? = nil,
+                                       completion: ((Result<T, Error>) -> Void)?,
+                                       completionWithResponse: ((Result<T, Error>, URLResponse?) -> Void)? = nil) -> CancellableRequest? {
+        guard let endpoint = getEndpoint() else {
+            completion?(.failure(HttpRequestError.urlNil))
+            return nil
+        }
+        let urlRequestBuilder = URLRequestBuilder(endpoint: endpoint)
+            .httpMethod(method)
+            .path(path)
+            .httpHeaders(getDefaultHeaders().joined(headers ?? [:]))
+            .parameters(getDefaultParams().joined(params ?? [:]))
+        return client.dataTask(request: urlRequestBuilder.build(),
+                               completion: completion,
+                               completionWithResponse: completionWithResponse)
+    }
+    
+    @discardableResult
+    public func dataTask<R: Encodable, T: Decodable>(method: HTTPMethod,
+                                                     path: String,
+                                                     headers: [String: String]? = nil,
+                                                     params: ParametersType? = nil,
+                                                     sendingData: R?,
+                                                     encoding: HTTPEncoding.Factory = HTTPEncoding.Factory(),
                                                      completion: ((Result<T, Error>) -> Void)?,
                                                      completionWithResponse: ((Result<T, Error>, URLResponse?) -> Void)? = nil) -> CancellableRequest? {
         guard let endpoint = getEndpoint() else {
@@ -29,6 +50,7 @@ open class APIService<T: HTTPClient> {
             return nil
         }
         let urlRequestBuilder = URLRequestBuilder(endpoint: endpoint)
+            .httpMethod(method)
             .path(path)
             .httpHeaders(getDefaultHeaders().joined(headers ?? [:]))
             .parameters(getDefaultParams().joined(params ?? [:]))
@@ -39,11 +61,11 @@ open class APIService<T: HTTPClient> {
     }
     
     @discardableResult
-    public func multipartDataTask<R: Decodable>(_ method: HTTPMethod,
-                                                _ path: String,
-                                                _ headers: [String: String]? = nil,
-                                                _ params: ParametersType? = nil,
-                                                _ multiparts: [MultipartFormDataType]? = nil,
+    public func multipartDataTask<R: Decodable>(method: HTTPMethod,
+                                                path: String,
+                                                headers: [String: String]? = nil,
+                                                params: ParametersType? = nil,
+                                                multiparts: [MultipartFormDataType]?,
                                                 completion: ((Result<R, Error>) -> Void)?,
                                                 completionWithResponse: ((Result<R, Error>, URLResponse?) -> Void)? = nil) -> CancellableRequest? {
         guard let endpoint = getEndpoint() else {
@@ -51,6 +73,7 @@ open class APIService<T: HTTPClient> {
             return nil
         }
         let urlRequestBuilder = URLRequestBuilder(endpoint: endpoint)
+            .httpMethod(method)
             .path(path)
             .httpHeaders(getDefaultHeaders().joined(headers ?? [:]))
             .parameters(getDefaultParams().joined(params ?? [:]))

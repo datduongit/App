@@ -8,7 +8,7 @@
 import Foundation
 
 class AppBaseRepo {
-    func invokeService<T: AppAPIService>(_ service: T.Type) -> T {
+    func invokeService<T: AppApiService>(_ service: T.Type) -> T {
         return AppApiServiceFactory.create(service)
     }
 }

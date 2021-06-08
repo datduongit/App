@@ -37,13 +37,13 @@
 		04FF002B26671ACD003E8D96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04FF002926671ACD003E8D96 /* LaunchScreen.storyboard */; };
 		04FF003626671ACD003E8D96 /* AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FF003526671ACD003E8D96 /* AppTests.swift */; };
 		04FF004126671ACE003E8D96 /* AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FF004026671ACE003E8D96 /* AppUITests.swift */; };
-		373852AC266E250700E4F102 /* AppHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373852AB266E250700E4F102 /* AppHTTPClient.swift */; };
-		3763D2152669E76C00901CE5 /* AppAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3763D2142669E76C00901CE5 /* AppAPIService.swift */; };
-		3763D21F2669FB0200901CE5 /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3763D21E2669FB0200901CE5 /* APIConfig.swift */; };
+		373852AC266E250700E4F102 /* AppHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373852AB266E250700E4F102 /* AppHttpClient.swift */; };
+		3763D2152669E76C00901CE5 /* AppApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3763D2142669E76C00901CE5 /* AppApiService.swift */; };
+		3763D21F2669FB0200901CE5 /* ApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3763D21E2669FB0200901CE5 /* ApiConfig.swift */; };
 		3763D2222669FBB300901CE5 /* HomeDataToHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3763D2212669FBB300901CE5 /* HomeDataToHome.swift */; };
 		3763D2242669FBD500901CE5 /* HomeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3763D2232669FBD500901CE5 /* HomeData.swift */; };
 		3763D2272669FC1A00901CE5 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3763D2262669FC1A00901CE5 /* Home.swift */; };
-		3763D2292669FCED00901CE5 /* AppAPIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3763D2282669FCED00901CE5 /* AppAPIEndpoint.swift */; };
+		3763D2292669FCED00901CE5 /* AppApiEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3763D2282669FCED00901CE5 /* AppApiEndpoint.swift */; };
 		3763D22B266A001200901CE5 /* AppBaseRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3763D22A266A001200901CE5 /* AppBaseRepo.swift */; };
 		3763D22D266A009300901CE5 /* AppApiServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3763D22C266A009300901CE5 /* AppApiServiceFactory.swift */; };
 		3763D230266A03FA00901CE5 /* HomeApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3763D22F266A03FA00901CE5 /* HomeApiService.swift */; };
@@ -136,13 +136,13 @@
 		04FF004226671ACE003E8D96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A1AFEE413045245BF29C9C8 /* Pods_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B117982577FFA3B525E47FB /* Pods-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.debug.xcconfig"; path = "Target Support Files/Pods-App/Pods-App.debug.xcconfig"; sourceTree = "<group>"; };
-		373852AB266E250700E4F102 /* AppHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHTTPClient.swift; sourceTree = "<group>"; };
-		3763D2142669E76C00901CE5 /* AppAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAPIService.swift; sourceTree = "<group>"; };
-		3763D21E2669FB0200901CE5 /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
+		373852AB266E250700E4F102 /* AppHttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHttpClient.swift; sourceTree = "<group>"; };
+		3763D2142669E76C00901CE5 /* AppApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppApiService.swift; sourceTree = "<group>"; };
+		3763D21E2669FB0200901CE5 /* ApiConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConfig.swift; sourceTree = "<group>"; };
 		3763D2212669FBB300901CE5 /* HomeDataToHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataToHome.swift; sourceTree = "<group>"; };
 		3763D2232669FBD500901CE5 /* HomeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeData.swift; sourceTree = "<group>"; };
 		3763D2262669FC1A00901CE5 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
-		3763D2282669FCED00901CE5 /* AppAPIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAPIEndpoint.swift; sourceTree = "<group>"; };
+		3763D2282669FCED00901CE5 /* AppApiEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppApiEndpoint.swift; sourceTree = "<group>"; };
 		3763D22A266A001200901CE5 /* AppBaseRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBaseRepo.swift; sourceTree = "<group>"; };
 		3763D22C266A009300901CE5 /* AppApiServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppApiServiceFactory.swift; sourceTree = "<group>"; };
 		3763D22F266A03FA00901CE5 /* HomeApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeApiService.swift; sourceTree = "<group>"; };
@@ -394,12 +394,12 @@
 				3763D22E266A03EE00901CE5 /* ApiService */,
 				3763D2202669FB9100901CE5 /* Converter */,
 				3763D21D2669FAD000901CE5 /* Model */,
-				3763D21E2669FB0200901CE5 /* APIConfig.swift */,
-				3763D2142669E76C00901CE5 /* AppAPIService.swift */,
-				3763D2282669FCED00901CE5 /* AppAPIEndpoint.swift */,
+				3763D21E2669FB0200901CE5 /* ApiConfig.swift */,
+				3763D2142669E76C00901CE5 /* AppApiService.swift */,
+				3763D2282669FCED00901CE5 /* AppApiEndpoint.swift */,
 				3763D22A266A001200901CE5 /* AppBaseRepo.swift */,
 				3763D22C266A009300901CE5 /* AppApiServiceFactory.swift */,
-				373852AB266E250700E4F102 /* AppHTTPClient.swift */,
+				373852AB266E250700E4F102 /* AppHttpClient.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -721,16 +721,16 @@
 				04FF001F26671ACC003E8D96 /* AppDelegate.swift in Sources */,
 				3763D22D266A009300901CE5 /* AppApiServiceFactory.swift in Sources */,
 				3763D2272669FC1A00901CE5 /* Home.swift in Sources */,
-				3763D2292669FCED00901CE5 /* AppAPIEndpoint.swift in Sources */,
+				3763D2292669FCED00901CE5 /* AppApiEndpoint.swift in Sources */,
 				04D841D12667652F004E3957 /* SplashViewModel.swift in Sources */,
 				37AE6123266DC98E00A1EE19 /* DictionUtls.swift in Sources */,
 				3763D2222669FBB300901CE5 /* HomeDataToHome.swift in Sources */,
 				04D8421826679862004E3957 /* HomeDetailViewController.swift in Sources */,
 				37AE6120266DC73600A1EE19 /* AppDelegate+APNs.swift in Sources */,
-				3763D21F2669FB0200901CE5 /* APIConfig.swift in Sources */,
+				3763D21F2669FB0200901CE5 /* ApiConfig.swift in Sources */,
 				3763D230266A03FA00901CE5 /* HomeApiService.swift in Sources */,
-				373852AC266E250700E4F102 /* AppHTTPClient.swift in Sources */,
-				3763D2152669E76C00901CE5 /* AppAPIService.swift in Sources */,
+				373852AC266E250700E4F102 /* AppHttpClient.swift in Sources */,
+				3763D2152669E76C00901CE5 /* AppApiService.swift in Sources */,
 				04D841E026676D94004E3957 /* HomeViewController.swift in Sources */,
 				04D841E826677234004E3957 /* RemoteHomeRepo.swift in Sources */,
 			);

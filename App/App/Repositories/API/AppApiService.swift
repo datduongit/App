@@ -7,9 +7,9 @@
 
 import Networking
 
-class AppAPIService: APIService<AppHTTPClient> {
+class AppApiService: APIService<AppHttpClient> {
     override func getEndpoint() -> APIEndpoint? {
-        return AppAPIEndpoint.core
+        return AppApiEndpoint.core
     }
     
     override func getDefaultParams() -> ParametersType {
@@ -18,7 +18,7 @@ class AppAPIService: APIService<AppHTTPClient> {
     }
     
     override func getDefaultHeaders() -> [String : String] {
-        return [APIConfig.HEADER_CONTENT_TYPE: APIConfig.HEADER_CONTENT_TYPE_JSON,
+        return [ApiConfig.HEADER_CONTENT_TYPE: ApiConfig.HEADER_CONTENT_TYPE_JSON,
                 "Token": client.token]
     }
 }

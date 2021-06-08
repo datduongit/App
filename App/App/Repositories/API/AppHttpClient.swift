@@ -8,7 +8,7 @@
 import Foundation
 import Networking
 
-class AppHTTPClient: HTTPClient {
+class AppHttpClient: HTTPClient {
     let token: String
     init(token: String, config: URLSessionConfiguration) {
         self.token = token
