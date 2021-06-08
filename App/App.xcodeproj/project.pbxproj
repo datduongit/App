@@ -7,8 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040A3AF5266F2B8C0084B3BE /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040A3AF4266F2B8C0084B3BE /* SignInViewController.swift */; };
+		040A3AF9266F2B980084B3BE /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040A3AF8266F2B980084B3BE /* SignInViewController.xib */; };
+		040A3AFB266F43D30084B3BE /* SigninCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040A3AFA266F43D30084B3BE /* SigninCoordinator.swift */; };
+		040A3AFD266F44360084B3BE /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040A3AFC266F44360084B3BE /* SignInViewModel.swift */; };
+		040A3B01266F46AD0084B3BE /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040A3B00266F46AD0084B3BE /* MainCoordinator.swift */; };
+		040A3B07266F59A40084B3BE /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040A3B06266F59A40084B3BE /* SettingViewController.swift */; };
+		040A3B09266F59AD0084B3BE /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040A3B08266F59AD0084B3BE /* SettingViewModel.swift */; };
+		040A3B0B266F5A290084B3BE /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040A3B0A266F5A290084B3BE /* SettingViewController.xib */; };
+		040A3B0D266F5AC20084B3BE /* SettingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040A3B0C266F5AC20084B3BE /* SettingCoordinator.swift */; };
 		041AC3C6266DFC6B00022A68 /* Logger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A2A20E2668BD1400701C3F /* Logger.framework */; };
 		041AC3C7266DFC6B00022A68 /* Logger.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37A2A20E2668BD1400701C3F /* Logger.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0433DB79266F17AD009ACDE4 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0433DB78266F17AD009ACDE4 /* SignUpViewController.swift */; };
+		0433DB7B266F17B8009ACDE4 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0433DB7A266F17B8009ACDE4 /* SignUpViewModel.swift */; };
+		0433DB7D266F180E009ACDE4 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0433DB7C266F180E009ACDE4 /* SignUpViewController.xib */; };
+		0433DB80266F19DC009ACDE4 /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0433DB7F266F19DC009ACDE4 /* WalkthroughViewController.swift */; };
+		0433DB82266F19F0009ACDE4 /* WalkthroughViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0433DB81266F19F0009ACDE4 /* WalkthroughViewModel.swift */; };
+		0433DB84266F1A49009ACDE4 /* WalkthoughViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0433DB83266F1A49009ACDE4 /* WalkthoughViewController.xib */; };
+		0433DB86266F1AED009ACDE4 /* SignupCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0433DB85266F1AED009ACDE4 /* SignupCoordinator.swift */; };
 		04D8412B26675A58004E3957 /* Utility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D8412A26675A58004E3957 /* Utility.framework */; };
 		04D8412C26675A58004E3957 /* Utility.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04D8412A26675A58004E3957 /* Utility.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		04D8412F26675A62004E3957 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D8412E26675A62004E3957 /* Core.framework */; };
@@ -104,6 +120,22 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		040A3AF4266F2B8C0084B3BE /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		040A3AF8266F2B980084B3BE /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
+		040A3AFA266F43D30084B3BE /* SigninCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninCoordinator.swift; sourceTree = "<group>"; };
+		040A3AFC266F44360084B3BE /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		040A3B00266F46AD0084B3BE /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		040A3B06266F59A40084B3BE /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		040A3B08266F59AD0084B3BE /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
+		040A3B0A266F5A290084B3BE /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
+		040A3B0C266F5AC20084B3BE /* SettingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCoordinator.swift; sourceTree = "<group>"; };
+		0433DB78266F17AD009ACDE4 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		0433DB7A266F17B8009ACDE4 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		0433DB7C266F180E009ACDE4 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
+		0433DB7F266F19DC009ACDE4 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
+		0433DB81266F19F0009ACDE4 /* WalkthroughViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewModel.swift; sourceTree = "<group>"; };
+		0433DB83266F1A49009ACDE4 /* WalkthoughViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalkthoughViewController.xib; sourceTree = "<group>"; };
+		0433DB85266F1AED009ACDE4 /* SignupCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupCoordinator.swift; sourceTree = "<group>"; };
 		04D8412A26675A58004E3957 /* Utility.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Utility.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D8412E26675A62004E3957 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D8413126675A69004E3957 /* UIComponent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UIComponent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -193,11 +225,82 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040A3B04266F59740084B3BE /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				040A3B05266F59950084B3BE /* Setting */,
+				040A3B0C266F5AC20084B3BE /* SettingCoordinator.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		040A3B05266F59950084B3BE /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				040A3B06266F59A40084B3BE /* SettingViewController.swift */,
+				040A3B08266F59AD0084B3BE /* SettingViewModel.swift */,
+				040A3B0A266F5A290084B3BE /* SettingViewController.xib */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		0433DB72266F1725009ACDE4 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				0433DB75266F1730009ACDE4 /* Signup */,
+				0433DB76266F1736009ACDE4 /* Signin */,
+				0433DB77266F174D009ACDE4 /* BasicInfo */,
+				0433DB85266F1AED009ACDE4 /* SignupCoordinator.swift */,
+				040A3AFA266F43D30084B3BE /* SigninCoordinator.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		0433DB75266F1730009ACDE4 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				0433DB78266F17AD009ACDE4 /* SignUpViewController.swift */,
+				0433DB7A266F17B8009ACDE4 /* SignUpViewModel.swift */,
+				0433DB7C266F180E009ACDE4 /* SignUpViewController.xib */,
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
+		0433DB76266F1736009ACDE4 /* Signin */ = {
+			isa = PBXGroup;
+			children = (
+				040A3AF4266F2B8C0084B3BE /* SignInViewController.swift */,
+				040A3AF8266F2B980084B3BE /* SignInViewController.xib */,
+				040A3AFC266F44360084B3BE /* SignInViewModel.swift */,
+			);
+			path = Signin;
+			sourceTree = "<group>";
+		};
+		0433DB77266F174D009ACDE4 /* BasicInfo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BasicInfo;
+			sourceTree = "<group>";
+		};
+		0433DB7E266F1996009ACDE4 /* Walkthrough */ = {
+			isa = PBXGroup;
+			children = (
+				0433DB7F266F19DC009ACDE4 /* WalkthroughViewController.swift */,
+				0433DB81266F19F0009ACDE4 /* WalkthroughViewModel.swift */,
+				0433DB83266F1A49009ACDE4 /* WalkthoughViewController.xib */,
+			);
+			path = Walkthrough;
+			sourceTree = "<group>";
+		};
 		0482A31126672B2C00428963 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				04D841D726676C44004E3957 /* Home */,
 				04D841C326676370004E3957 /* Splash */,
+				0433DB7E266F1996009ACDE4 /* Walkthrough */,
+				0433DB72266F1725009ACDE4 /* Auth */,
+				04D841D726676C44004E3957 /* Home */,
+				040A3B04266F59740084B3BE /* Account */,
 				04D842132667818C004E3957 /* Views */,
 			);
 			path = Presentation;
@@ -209,6 +312,7 @@
 				04FF001E26671ACC003E8D96 /* AppDelegate.swift */,
 				37AE611F266DC73600A1EE19 /* AppDelegate+APNs.swift */,
 				04D841C0266762EC004E3957 /* AppCoordinator.swift */,
+				040A3B00266F46AD0084B3BE /* MainCoordinator.swift */,
 				04D842052667773B004E3957 /* DIContainer.swift */,
 			);
 			path = Main;
@@ -636,10 +740,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				04FF002B26671ACD003E8D96 /* LaunchScreen.storyboard in Resources */,
+				040A3B0B266F5A290084B3BE /* SettingViewController.xib in Resources */,
 				04D841C7266763A1004E3957 /* SplashViewController.xib in Resources */,
+				0433DB84266F1A49009ACDE4 /* WalkthoughViewController.xib in Resources */,
+				0433DB7D266F180E009ACDE4 /* SignUpViewController.xib in Resources */,
 				04D8421A26679874004E3957 /* HomeDetailViewController.xib in Resources */,
 				04FF002826671ACD003E8D96 /* Assets.xcassets in Resources */,
 				04D841E426676DB0004E3957 /* HomeViewController.xib in Resources */,
+				040A3AF9266F2B980084B3BE /* SignInViewController.xib in Resources */,
 				37AE612F266DDAD500A1EE19 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -713,23 +821,35 @@
 				04D8421C266799A1004E3957 /* HomeDetailViewModel.swift in Sources */,
 				04D841C1266762EC004E3957 /* AppCoordinator.swift in Sources */,
 				04D841E226676D9E004E3957 /* HomeViewModel.swift in Sources */,
+				0433DB7B266F17B8009ACDE4 /* SignUpViewModel.swift in Sources */,
+				0433DB79266F17AD009ACDE4 /* SignUpViewController.swift in Sources */,
+				040A3B01266F46AD0084B3BE /* MainCoordinator.swift in Sources */,
 				04D841D926676CED004E3957 /* HomeCoordinator.swift in Sources */,
+				040A3B09266F59AD0084B3BE /* SettingViewModel.swift in Sources */,
 				04D842062667773B004E3957 /* DIContainer.swift in Sources */,
 				04D8420D26677BEB004E3957 /* LocalHomeRepository.swift in Sources */,
+				0433DB80266F19DC009ACDE4 /* WalkthroughViewController.swift in Sources */,
 				3763D22B266A001200901CE5 /* AppBaseRepo.swift in Sources */,
 				3763D2242669FBD500901CE5 /* HomeData.swift in Sources */,
 				04FF001F26671ACC003E8D96 /* AppDelegate.swift in Sources */,
 				3763D22D266A009300901CE5 /* AppApiServiceFactory.swift in Sources */,
 				3763D2272669FC1A00901CE5 /* Home.swift in Sources */,
+				0433DB82266F19F0009ACDE4 /* WalkthroughViewModel.swift in Sources */,
 				3763D2292669FCED00901CE5 /* AppApiEndpoint.swift in Sources */,
 				04D841D12667652F004E3957 /* SplashViewModel.swift in Sources */,
 				37AE6123266DC98E00A1EE19 /* DictionUtls.swift in Sources */,
+				040A3AFB266F43D30084B3BE /* SigninCoordinator.swift in Sources */,
+				040A3B07266F59A40084B3BE /* SettingViewController.swift in Sources */,
 				3763D2222669FBB300901CE5 /* HomeDataToHome.swift in Sources */,
 				04D8421826679862004E3957 /* HomeDetailViewController.swift in Sources */,
+				040A3B0D266F5AC20084B3BE /* SettingCoordinator.swift in Sources */,
 				37AE6120266DC73600A1EE19 /* AppDelegate+APNs.swift in Sources */,
 				3763D21F2669FB0200901CE5 /* ApiConfig.swift in Sources */,
+				040A3AFD266F44360084B3BE /* SignInViewModel.swift in Sources */,
+				0433DB86266F1AED009ACDE4 /* SignupCoordinator.swift in Sources */,
 				3763D230266A03FA00901CE5 /* HomeApiService.swift in Sources */,
 				373852AC266E250700E4F102 /* AppHttpClient.swift in Sources */,
+				040A3AF5266F2B8C0084B3BE /* SignInViewController.swift in Sources */,
 				3763D2152669E76C00901CE5 /* AppApiService.swift in Sources */,
 				04D841E026676D94004E3957 /* HomeViewController.swift in Sources */,
 				04D841E826677234004E3957 /* RemoteHomeRepo.swift in Sources */,

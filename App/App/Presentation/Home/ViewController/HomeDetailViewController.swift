@@ -7,9 +7,24 @@
 import Core
 import UIKit
 
-class HomeDetailViewController: BaseViewController<HomeDetailViewModel> {
+class HomeDetailViewController: BaseViewController {
     
     @IBOutlet weak var actionBack: UIButton!
+    
+    private let viewModel: HomeDetailViewModel
+    
+    init(viewModel: HomeDetailViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func setupUI() {
+        title = "Home Detail"
+    }
     
     override func bind() {
         actionBack.rx.tap

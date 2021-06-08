@@ -12,7 +12,7 @@
             <connections>
                 <outlet property="actionDetail" destination="bKT-q7-1QZ" id="Hf6-KJ-73j"/>
                 <outlet property="messageLabel" destination="MBE-K5-HLt" id="xEt-O8-9s9"/>
-                <outlet property="view" destination="iN0-l3-epB" id="Z3G-A4-Mtd"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Gy3-7q-ige"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

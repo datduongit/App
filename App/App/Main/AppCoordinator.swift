@@ -55,8 +55,6 @@ class AppCoordinator: Coordinator {
     
     private func trigger(state: AppState) {
         switch state {
-        case .welcome, .logout:
-            runAuthFlow()
         case .main:
             runMainFlow()
         default: break
@@ -67,13 +65,24 @@ class AppCoordinator: Coordinator {
 extension AppCoordinator {
     
     private func runAppFlow() {
-        runMainFlow()
+        /// check exist account
+        if true {
+            runSignUpFlow()
+        }
     }
     
-    private func runAuthFlow() { }
+    private func runSignUpFlow() {
+        let signupCoordinator = SignupCoordinator(router: router, navigationType: .newFlow(hideBar: false), container: container)
+        setRootChild(coordinator: signupCoordinator, hideBar: false)
+    }
+    
+    private func runSignInFlow() {
+        let signinCoordinator = SigninCoordinator(router: router, navigationType: .newFlow(hideBar: false))
+        setRootChild(coordinator: signinCoordinator, hideBar: false)
+    }
     
     private func runMainFlow() {
-        let homeCoordinator = HomeCoordinator(router: router, navigationType: .newFlow(hideBar: false), container: container)
-        setRootChild(coordinator: homeCoordinator, hideBar: true)
+        let mainCoordinator = MainCoordinator(router: router, navigationType: .newFlow(hideBar: false), container: container)
+        setRootChild(coordinator: mainCoordinator, hideBar: false)
     }
 }

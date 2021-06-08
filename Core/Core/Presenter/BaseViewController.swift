@@ -9,26 +9,17 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-open class BaseViewController<VM: BaseViewModel>: UIViewController {
+open class BaseViewController: UIViewController {
     
     public let disposeBag = DisposeBag()
-    
-    public let viewModel: VM
-    
-    public init(viewModel: VM) {
-        self.viewModel = viewModel
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required public init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     
     open override func viewDidLoad() {
         super.viewDidLoad()
         bind()
     }
     
-    open func bind() { }
+    open func setupUI() {}
+    
+    open func bind() {}
     
 }

@@ -11,32 +11,52 @@ import RxSwift
 import RxCocoa
 import Logger
 
-class HomeViewController: BaseViewController<HomeViewModel> {
+class HomeViewController: BaseViewController {
     
     @IBOutlet private weak var messageLabel: UILabel!
     @IBOutlet private weak var actionDetail: UIButton!
     
-    override func bind() {
+    private let viewModel: HomeViewModel
+    
+    init(viewModel: HomeViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func setupUI() {
         messageLabel.isHidden = true
         messageLabel.layer.cornerRadius = 16
         messageLabel.layer.masksToBounds = true
-        actionDetail
-            .rx.tap
-            .bind(onNext: { [weak self] _ in
-                if let fcmToken = AppDelegate.shared.fcmToken {
-                    UIPasteboard.general.string = fcmToken
-                    Log.d(fcmToken)
-                    self?.showMessageCopy()
-                }
-            })
-            .disposed(by: disposeBag)
+    }
+    
+    override func bind() {
         
-//        viewModel
-//            .homeModels
-//            .bind(onNext: { data in
-//                print(data.first?.priority)
+//        actionDetail
+//            .rx.tap
+//            .bind(onNext: { [weak self] _ in
+//                if let fcmToken = AppDelegate.shared.fcmToken {
+//                    UIPasteboard.general.string = fcmToken
+//                    Log.d(fcmToken)
+//                    self?.showMessageCopy()
+//                }
 //            })
 //            .disposed(by: disposeBag)
+        
+        actionDetail
+            .rx.tap
+            .bind(to: viewModel.navToDetail)
+            .disposed(by: disposeBag)
+        
+        viewModel
+            .homeModels
+            .bind(onNext: { data in
+                print(data.first?.priority ?? 0)
+            })
+            .disposed(by: disposeBag)
     }
     
     private func showMessageCopy() {
