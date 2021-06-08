@@ -12,10 +12,11 @@ import Utility
 
 class HomeViewModel: BaseViewModel {
     
-    let repo: IHomeRepo
+    let repository: IHomeRepo
     
     /// Transforms
     let homeModels = PublishRelay<[Home]>()
+    
     let fetchData = PublishRelay<Void>()
     let navToDetail = PublishRelay<Void>()
     
@@ -24,14 +25,14 @@ class HomeViewModel: BaseViewModel {
     
     
     init(repo: IHomeRepo) {
-        self.repo = repo
+        self.repository = repo
         super.init()
     }
     
     override func bind() {
         fetchData
             .flatMapLatest { [unowned self] in
-                return self.repo
+                return self.repository
                     .getHomeService()
                     .trackActivity(activityIndicator)
             }

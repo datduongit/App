@@ -7,7 +7,7 @@
 
 import Foundation
 
-class HomeApiService: AppAPIService {
+class HomeApiService: AppApiService {
     func getListHomeInfo(complete: @escaping ([HomeData]) -> Void) {
         var result: [HomeData] = []
         for i in 0...100 {

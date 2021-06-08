@@ -11,7 +11,7 @@ import Logger
 private let TAG = "[HTTPClient]"
 private let responseTimeWarningThreshold: Double = 1500 // ms
 
-public class HTTPClient {
+open class HTTPClient {
     
     private let session: URLSession
     

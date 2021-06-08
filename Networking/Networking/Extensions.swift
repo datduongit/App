@@ -8,7 +8,7 @@
 import Foundation
 
 extension Dictionary {
-    func toJson(beautify: Bool = false) -> String? {
+    public func toJson(beautify: Bool = false) -> String? {
         guard let data = try? JSONSerialization.data(
             withJSONObject: self,
             options: beautify ? .prettyPrinted : .init()) else {
@@ -22,7 +22,7 @@ extension Dictionary {
         other.compactMapValues({ $0 }).forEach({ self[$0.key] = $0.value })
     }
     
-    func joined(_ other: [Key: Value?]) -> [Key: Value] {
+    public func joined(_ other: [Key: Value?]) -> [Key: Value] {
         var dict = self
         dict.join(other)
         return dict

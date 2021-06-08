@@ -9,31 +9,43 @@ import UIKit
 import Core
 import RxSwift
 import RxCocoa
+import Logger
 
 class HomeViewController: BaseViewController<HomeViewModel> {
     
+    @IBOutlet private weak var messageLabel: UILabel!
     @IBOutlet private weak var actionDetail: UIButton!
     
     override func bind() {
+        messageLabel.isHidden = true
+        messageLabel.layer.cornerRadius = 16
+        messageLabel.layer.masksToBounds = true
         actionDetail
             .rx.tap
-            .bind(to: self.viewModel.fetchData)
-            .disposed(by: disposeBag)
-        
-        viewModel
-            .homeModels
-            .bind(onNext: { data in
-                print(data.first?.priority ?? 0)
+            .bind(onNext: { [weak self] _ in
+                if let fcmToken = AppDelegate.shared.fcmToken {
+                    UIPasteboard.general.string = fcmToken
+                    Log.d(fcmToken)
+                    self?.showMessageCopy()
+                }
             })
             .disposed(by: disposeBag)
         
-        viewModel
-            .isLoading
-            .asDriverOnErrorJustComplete()
-            .drive(onNext: {
-                print("isLoading: \($0)")
-            })
-            .disposed(by: disposeBag)
-            
+//        viewModel
+//            .homeModels
+//            .bind(onNext: { data in
+//                print(data.first?.priority)
+//            })
+//            .disposed(by: disposeBag)
+    }
+    
+    private func showMessageCopy() {
+        if !messageLabel.isHidden {
+            return
+        }
+        messageLabel.isHidden = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) { [weak self] in
+            self?.messageLabel.isHidden = true
+        }
     }
 }

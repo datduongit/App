@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct APIConfig {
+struct ApiConfig {
     static let BASE_URL = "github.com"
 
     static let HEADER_CONTENT_TYPE = "Content-Type"

@@ -7,14 +7,14 @@
 
 import Networking
 
-enum AppAPIEndpoint: APIEndpoint {
+enum AppApiEndpoint: APIEndpoint {
     case core
     case frontendLocal(host: String, port: Int?)
     
     var components: (host: String, basePath: String) {
         switch self {
         case .core:
-            return (APIConfig.BASE_URL, "/chungtv")
+            return (ApiConfig.BASE_URL, "/chungtv")
         case .frontendLocal(let host, _):
             return (host, "/chungtv")
         }

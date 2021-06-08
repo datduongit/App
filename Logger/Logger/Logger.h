@@ -2,7 +2,7 @@
 //  Logger.h
 //  Logger
 //
-//  Created by ChungTV on 03/06/2021.
+//  Created by Edric D. on 07/06/2021.
 //
 
 #import <Foundation/Foundation.h>
