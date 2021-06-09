@@ -16,17 +16,6 @@ class HomeViewController: BaseViewController {
     @IBOutlet private weak var messageLabel: UILabel!
     @IBOutlet private weak var actionDetail: UIButton!
     
-    private let viewModel: HomeViewModel
-    
-    init(viewModel: HomeViewModel) {
-        self.viewModel = viewModel
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     override func setupUI() {
         messageLabel.isHidden = true
         messageLabel.layer.cornerRadius = 16
@@ -34,6 +23,10 @@ class HomeViewController: BaseViewController {
     }
     
     override func bind() {
+        super.bind()
+        guard let viewModel = viewModel as? HomeViewModel else {
+            return
+        }
         
 //        actionDetail
 //            .rx.tap
@@ -48,13 +41,20 @@ class HomeViewController: BaseViewController {
         
         actionDetail
             .rx.tap
-            .bind(to: viewModel.navToDetail)
+            .bind(to: viewModel.fetchData)
             .disposed(by: disposeBag)
         
         viewModel
             .homeModels
             .bind(onNext: { data in
                 print(data.first?.priority ?? 0)
+            })
+            .disposed(by: disposeBag)
+        
+        isLoading
+            .observeOn(MainScheduler.asyncInstance)
+            .bind(onNext: {
+                print($0)
             })
             .disposed(by: disposeBag)
     }

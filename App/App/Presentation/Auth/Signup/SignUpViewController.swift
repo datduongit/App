@@ -13,22 +13,15 @@ class SignUpViewController: BaseViewController {
     
     @IBOutlet weak var signupButton: UIButton!
     
-    private let viewModel: SignUpViewModel
-    
-    init(viewModel: SignUpViewModel) {
-        self.viewModel = viewModel
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     override func setupUI() {
         title = "Sign Up"
     }
     
     override func bind() {
+        guard let viewModel = viewModel as? SignUpViewModel else {
+            return
+        }
+        
         signupButton.rx.tap
             .bind(to: viewModel.actionSignup)
             .disposed(by: disposeBag)

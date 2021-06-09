@@ -20,9 +20,6 @@ class HomeViewModel: BaseViewModel {
     let fetchData = PublishRelay<Void>()
     let navToDetail = PublishRelay<Void>()
     
-    private let activityIndicator = ActivityIndicator()
-    private let errorTracker = ErrorTracker()
-    
     
     init(repo: IHomeRepo) {
         self.repository = repo
@@ -37,11 +34,6 @@ class HomeViewModel: BaseViewModel {
                     .trackActivity(activityIndicator)
             }
             .bind(to: homeModels)
-            .disposed(by: disposeBag)
-        
-        activityIndicator
-            .asObservable()
-            .bind(to: isLoading)
             .disposed(by: disposeBag)
         
     }

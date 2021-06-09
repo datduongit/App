@@ -17,13 +17,15 @@ public protocol BaseViewModelType {
 }
 
 open class BaseViewModel {
-    open var isLoading = PublishRelay<Bool>()
-    open var error = PublishRelay<Error>()
     public let disposeBag = DisposeBag()
+    
+    open var activityIndicator = ActivityIndicator()
+    open var errorTracker = ErrorTracker()
     
     public init() {
         bind()
     }
     
-    open func bind() {}
+    open func bind() {
+    }
 }
